@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="NavbarMain">
         <div class="NavContainer row">
             <div className="col-md-4">
-                <h1>Tech Idiots</h1> 
+                <h2>Tech Idiots</h2> 
             </div>
         <div className="col-md-8">
             <div className="NavList">
