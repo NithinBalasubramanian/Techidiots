@@ -27,7 +27,7 @@ const HomeListoutComponent = () => {
                   let link = "https://mernblogdemo.herokuapp.com/Blog/";
                   let ref = itm.url;
                   let refUrl = link.concat(ref);
-                if(k === 0 || k === 1){
+                if(k === 0 || k === 1 || k === 9 || k === 10 || k === 20 || k=== 21){
                     return(
                     <div className="col-md-6 card_col" >
                         <div className="card_home">
