@@ -1,5 +1,5 @@
 import './App.scss';
-import Header from './include/navbar';
+import Header from './includes/navbar';
 
 function App() {
   return (
