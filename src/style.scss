@@ -10,7 +10,7 @@ $menuColor : #fff;
   height:60px;
   background-color:$primaryColor;
   
-  h1{
+  h2{
     font-size:28px;
     padding:10px;
     color:$logoColor;
@@ -27,6 +27,7 @@ $menuColor : #fff;
       .NavListMenu{
         list-style:none;
         display:inline;
+        float:right;
         
         li{
           padding:5px 10px;
@@ -35,6 +36,9 @@ $menuColor : #fff;
           a{
             text-decoration:none;
             color:$menuColor;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
           }
         }
       }
