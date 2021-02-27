@@ -1,4 +1,4 @@
-impot React from 'react';
+import React from 'react';
 import './style.scss';
 
 const ContentManager = () => {
