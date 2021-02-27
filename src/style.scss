@@ -1,4 +1,7 @@
 $primaryColor : lightgray;
+$HeadingColor : #fff;
+$logoColor : #fff;
+$menuColor : #fff;
 
 
 
@@ -10,10 +13,30 @@ $primaryColor : lightgray;
   h1{
     font-size:28px;
     padding:10px;
-    color:#fff;
+    color:$logoColor;
   }
   
   .NavContainer{
+    width:90%;
+    margin:0px auto;
     
+    .NavList{
+       width:100%;
+      margin-top:10px;
+      
+      .NavListMenu{
+        list-style:none;
+        display:inline;
+        
+        li{
+          padding:5px 10px;
+          
+          a{
+            text-decoration:none;
+            color:$menuColor;
+          }
+        }
+      }
+    }
   }
 }
