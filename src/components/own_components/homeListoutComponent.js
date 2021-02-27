@@ -46,7 +46,7 @@ const HomeListoutComponent = () => {
                     <div className="col-md-4 card_col">
                         <div className="card_home">
                             <a href={refUrl}>
-                                <img src={refUrl} alt="img" width="100%" height="250px" /> 
+                                <img src={itm.imgUrl} alt="img" width="100%" height="250px" /> 
                                 <h4>{itm.title}</h4>
                                 <div className="byAuth">
                                     - by {itm.auther} 
