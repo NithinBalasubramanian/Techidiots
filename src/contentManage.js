@@ -3,7 +3,7 @@ import './style.scss';
 
 const ContentManager = () => {
   return(
-    <div>
+    <div className="contMain">
       <h1>Content</h1>
     </div>
   )
