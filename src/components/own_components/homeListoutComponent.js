@@ -24,14 +24,14 @@ const HomeListoutComponent = () => {
     <div className="homeListContainer">
       <div className="row">
                   { Listdata.map((itm,k) => {
-                  let link = "https://mernblogdemo.herokuapp.com/Blog/";
-                  let ref = {itm.url};
-                  let refUrl = link.concat(ref);
+//                   let link = "https://mernblogdemo.herokuapp.com/Blog/";
+//                   let ref = {itm.url};
+//                   let refUrl = link.concat(ref);
                 if(k === 0 || k === 1){
                     return(
                     <div className="col-md-6 card_col" >
                         <div className="card_home">
-                            <a href={refUrl}>
+                            <a href="https://mernblogdemo.herokuapp.com/Blog/'+{itm.url}+'">
                                 <img src={itm.imgUrl} alt="img" width="100%" height="250px" /> 
                                 <h4>{itm.title}</h4>
                                 <div className="byAuth">
@@ -45,7 +45,7 @@ const HomeListoutComponent = () => {
                 return(
                     <div className="col-md-4 card_col">
                         <div className="card_home">
-                            <a href="https://mernblogdemo.herokuapp.com/Blog/{itm.url}" >
+                            <a href="https://mernblogdemo.herokuapp.com/Blog/'+{itm.url}+'">
                                 <img src={refUrl} alt="img" width="100%" height="250px" /> 
                                 <h4>{itm.title}</h4>
                                 <div className="byAuth">
