@@ -1,6 +1,6 @@
 import React , { useState , useEffect } from 'react';
-import '../../../App.scss';
-import axios from '../../../instance_API';
+import '../../App.scss';
+import axios from '../../instance_API';
 
 const HomeListoutComponent = () => {
   
