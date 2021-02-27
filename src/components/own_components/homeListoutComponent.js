@@ -11,7 +11,7 @@ const HomeListoutComponent = () => {
     }, [])
 
     const fetchAll = () =>{
-        axios.get('/')
+        axios.get('/homeFetch')
         .then((res) => {
             setListdata(res.data);
         })
