@@ -33,7 +33,6 @@ const HomeListoutComponent = () => {
                                 <h4>{itm.title}</h4>
                                 <div className="byAuth">
                                     - by {itm.auther} 
-//                                     <small>{itm.createdOn}</small>
                                 </div>
                             </a>
                         </div>                        
@@ -48,7 +47,6 @@ const HomeListoutComponent = () => {
                                 <h4>{itm.title}</h4>
                                 <div className="byAuth">
                                     - by {itm.auther} 
-//                                     <small>{moment(itm.createdOn).fromNow()}</small>
                                 </div>
                             </a>
                         </div>
