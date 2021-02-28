@@ -26,10 +26,10 @@ const HomeListoutComponent = () => {
   return(
     <>
        <div className={(FetchStatus) ? "preLoader" : "preNone" } >
-        <div class="wrap">
-            <div class="loading">
-                <div class="bounceball"></div>
-                <div class="text">Fetching</div>
+        <div className="wrap">
+            <div className="loading">
+                <div className="bounceball"></div>
+                <div className="text">Fetching</div>
             </div>
         </div>
     </div>

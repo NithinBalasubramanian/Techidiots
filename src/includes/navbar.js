@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     return(
       <div className="NavbarMain">
-        <div class="NavContainer row">
+        <div className="NavContainer row">
             <div className="col-md-4">
                 <h2>Tech Idiots</h2> 
             </div>

@@ -2,7 +2,7 @@ $primaryColor : #40e693;
 $HeadingColor : #100C2E;
 $logoColor : #fff;
 $menuColor : #fff;
-$cardColor : #dcf7e9;
+$cardColor : #f2fffa;
 $activeColor :#05361d ;
 
 
@@ -174,6 +174,7 @@ footer{
         overflow:hidden;
         background-color:$cardColor;
         padding:0px;
+        box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
 
         a{
           text-decoration:none;
@@ -195,6 +196,49 @@ footer{
 
       .card_home:hover{
         background-color:$primaryColor;
+      }
+    }
+
+    //book design
+
+    .bookCard{
+      margin:15px 0px;
+
+      a{
+        text-decoration:none;
+        color:$HeadingColor;
+      }
+
+      .bookDisplay{
+        width:99%;
+        height:100%;
+        border-radius:10px;
+        overflow:hidden;
+        background-color:$cardColor;
+        padding:0px 0px 10px 0px;
+        box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+
+        h4{
+          padding:10px 10px 0px 10px;
+          font-size:18px;
+          letter-spacing:1px;
+          text-transform: capitalize;
+          color:$activeColor;
+          margin:0px;
+        }
+
+        .publish{
+          padding:0px 10px;
+          color:$primaryColor;
+        }
+
+        .bookDesc{
+          padding:10px;
+          text-indent:15px;
+          text-align:justify;
+          font-size:14px;
+          letter-spacing:1px;
+        }
       }
     }
   }
