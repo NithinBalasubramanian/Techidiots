@@ -1,6 +1,7 @@
 import React from 'react';
 import '../style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { NavLink } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -13,9 +14,9 @@ const Navbar = () => {
         <div className="col-md-8">
             <div className="NavList">
                 <ul className="NavListMenu">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">NEWS</a></li>
-                    <li><a href="#">BOOKS</a></li>
+                    <li><NavLink to="/" activeClassName="activeMenu" exact>HOME</NavLink></li>
+                    <li><NavLink to="/News" activeClassName="activeMenu">NEWS</NavLink></li>
+                    <li><NavLink to="/Books" activeClassName="activeMenu">BOOKS</NavLink></li>
                 </ul>
             </div>
         </div>

@@ -1,10 +1,12 @@
 import React , { useState , useEffect } from 'react';
 import '../../App.scss';
-import axios from '../../instance_API';
+import axios from '../../apiInstance/instance_API';
 
 const HomeListoutComponent = () => {
   
   let [ Listdata , setListdata ] = useState([]);
+
+  let [ FetchStatus , setFetchStatus ] = useState(true);
 
     useEffect(() => {
         fetchAll();
@@ -14,6 +16,7 @@ const HomeListoutComponent = () => {
         axios.get('/homeFetch')
         .then((res) => {
             setListdata(res.data);
+            setFetchStatus(false);
         })
         .catch((error) => {
             console.log(error);
@@ -21,6 +24,15 @@ const HomeListoutComponent = () => {
     }
     
   return(
+    <>
+       <div className={(FetchStatus) ? "preLoader" : "preNone" } >
+        <div class="wrap">
+            <div class="loading">
+                <div class="bounceball"></div>
+                <div class="text">Fetching</div>
+            </div>
+        </div>
+    </div>
     <div className="homeListContainer">
       <div className="row">
                   { Listdata.map((itm,k) => {
@@ -32,7 +44,7 @@ const HomeListoutComponent = () => {
                     <div className="col-md-6 card_col" >
                         <div className="card_home">
                             <a href={refUrl}>
-                                <img src={itm.imgUrl} alt="img" width="100%" height="250px" /> 
+                                <img src={itm.imgUrl} alt="img" width="100%" height="300px" /> 
                                 <h4>{itm.title}</h4>
                                 <div className="byAuth">
                                     - by {itm.auther} 
@@ -59,6 +71,7 @@ const HomeListoutComponent = () => {
             }
        </div>
     </div>
+    </>
   );
 }
 

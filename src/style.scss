@@ -1,7 +1,83 @@
-$primaryColor : #0DB46E;
+$primaryColor : #40e693;
 $HeadingColor : #100C2E;
 $logoColor : #fff;
 $menuColor : #fff;
+$cardColor : #dcf7e9;
+$activeColor :#05361d ;
+
+
+//preloader
+
+@import  url(https://fonts.googleapis.com/css?family=Montserrat);
+
+
+$width: 15px;
+$height: 15px;
+
+
+$bounce_height: 30px;
+
+
+.preLoader{
+  width:100%;
+  height:850px;
+  background-color:#fff;
+  position:fixed;
+  z-index:1001;
+}
+
+.preNone{
+  display:none;
+}
+
+.wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+  color: $primaryColor;
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.bounceball {
+  position: relative;
+  display: inline-block;
+  height: 37px;
+  width: $width;
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    width: $width;
+    height: $height;
+    border-radius: 50%;
+    background-color: $primaryColor;
+    transform-origin: 50%;
+    animation: bounce 500ms alternate infinite ease;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: $bounce_height;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    transform: scaleX(2);
+  }
+  35% {
+    height: $height;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0;
+  }
+}
 
 //navbar part
 
@@ -9,6 +85,8 @@ $menuColor : #fff;
   width:100%;
   height:60px;
   background-color:$primaryColor;
+  position:fixed;
+  z-index:1001;
   
   h2{
     font-size:28px;
@@ -39,6 +117,10 @@ $menuColor : #fff;
             font-size: 14px;
             font-weight: 600;
             letter-spacing: 1px;
+          }
+
+          .activeMenu{
+            color : $activeColor;
           }
         }
       }
@@ -73,10 +155,47 @@ footer{
 .contMain{
   width:100%;
   margin:0px;
-  min-height:650px;
+  min-height:700px;
   
   .homeListContainer{
     width:90%;
-    margin:15px auto;
+    margin:0px auto;
+    padding:80px 0px 20px 0px;
+
+    .card_col{
+      height:auto;
+      padding:0px;
+      margin:10px 0px;
+
+      .card_home{
+        width:98%;
+        height:500px;
+        border-radius:10px;
+        overflow:hidden;
+        background-color:$cardColor;
+        padding:0px;
+
+        a{
+          text-decoration:none;
+          color:$HeadingColor;
+        }
+
+        h4{
+          padding:10px;
+          height:150px;
+          color:$HeadingColor;
+        }
+
+        .byAuth{
+          padding:10px;
+          color:$activeColor;
+          font-size:14px;
+        }
+      }
+
+      .card_home:hover{
+        background-color:$primaryColor;
+      }
+    }
   }
 }
