@@ -5,6 +5,10 @@ import axios from '../../apiInstance/instance_book_API';
 const BookStore = () => {
 
   let [ Listdata , setListdata ] = useState([]);
+  
+  //api data from rapid api
+  
+  let [ Listdata_2 , setListdata_2 ] = useState([]);
     
   let [ FetchStatus , setFetchStatus ] = useState(true);
 
@@ -36,8 +40,9 @@ const BookStore = () => {
         "x-rapidapi-host": "book4.p.rapidapi.com"
           }
         })
-        .then(response => {
-          console.log(response);
+        .then(resp => {
+          setListdata_2(res);
+          //console.log(res);
         })
         .catch(err => {
           console.error(err);
@@ -66,12 +71,8 @@ const BookStore = () => {
                                 <img src={itm.book_image} alt="Book" width="100%" height="360px" />
                                 <h4>{itm.title}</h4>
                                 <div class="row publish">
-                                    <div class="col-md-4">
-                                        <small>Pblished By </small><br/>
+                                    <div class="col-md-12">
                                         <small>Author </small>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <small>: {itm.publisher}</small><br/>
                                         <small>: {itm.author}</small>
                                     </div>
                                 </div>
@@ -85,6 +86,28 @@ const BookStore = () => {
                     })
                 }
                 </div>
+                <h1>Fantasy Book Collections </h1><small>( Source : Rapid Api )</small>
+                <div className="row">
+                { Listdata_2.map((itm,k) => {
+                    return(
+                        <div className="col-md-3 bookCard" >
+                            <div className="bookDisplay" key={k}>
+                                <img src={itm.url} alt="Book" width="100%" height="360px" />
+                                <h4>{itm.title}</h4>
+                                <div<div class="col-md-12">
+                                        <small>Author </small>
+                                        <small>: {itm.author}</small>
+                                    </div>
+                                </div>
+                                <div className="bookDesc">
+                                    {itm.detail}
+                                </div>
+                            </div>
+                        </div>
+                    )
+                    })
+                }
+             </div>
         </div>
         </>
     );
