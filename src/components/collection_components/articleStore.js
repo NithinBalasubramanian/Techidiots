@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { useState , useEffect } from 'react';
 import '../../App.scss';
 import axios from '../../apiInstance/Instance_article_API/Instance_Newsapi_API';
 
