@@ -14,7 +14,8 @@ const ArticleStore = () => {
     const fetchAll = () =>{
         axios.get('')
         .then((res) => {
-            setListdata(res.data.articles);
+            setListdata(res.data.response);
+          console.log(res.data.response);
             setFetchStatus(false);
         })
         .catch((error) => {
