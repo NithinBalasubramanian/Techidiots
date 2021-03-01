@@ -41,7 +41,7 @@ const ArticleStore = () => {
                        <div className="col-md-4 bookCard" >
                         <a href={itm.uri} target="_blank">
                             <div className="bookDisplay" key={k}>
-                                <img src='https://www.nytimes.com/'{itm.multimedia[0].url} alt="Book" width="100%" height="360px" />
+                                <img src='https://www.nytimes.com/'{itm.multimedia[0].url} alt="Book" width="100%" height="300px" />
                                 <h4>{itm.headline.main }</h4>
                                 <div class="row publish">
                                     <div class="col-md-12">
