@@ -22,6 +22,12 @@ const BookStore = () => {
             console.log(error);
         })
     }
+    
+    setTimeout(check,2000);
+  
+  const check = () => {
+    alert("hello");
+  }
 
 
     return(
