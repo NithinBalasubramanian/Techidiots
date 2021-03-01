@@ -10,6 +10,11 @@ const BookStore = () => {
 
   useEffect(() => {
     fetchAll();
+    
+    setTimeout(
+      () => alert("hello"), 
+      1000
+    );
 }, [])
 
     const fetchAll = () =>{
@@ -22,12 +27,6 @@ const BookStore = () => {
             console.log(error);
         })
     }
-    
-    setTimeout(check,2000);
-  
-  const check = () => {
-    alert("hello");
-  }
 
 
     return(
