@@ -14,8 +14,8 @@ const ArticleStore = () => {
     const fetchAll = () =>{
         axios.get('')
         .then((res) => {
-            setListdata(res.data.response);
-          console.log(res.data.response);
+            setListdata(res.data.response.docs);
+          console.log(res.data.response.docs);
             setFetchStatus(false);
         })
         .catch((error) => {
@@ -36,7 +36,13 @@ const ArticleStore = () => {
         <div className="homeListContainer">
                 <h1>Article Collections </h1><small>( Source : NewYork Times )</small>
                 <div className="row">
-               
+                  { Listdata.map((itm,k) => {
+                    return(
+                      <div className="col-md-4">
+                        <h1>{ itm.heading.main }</h1>
+                      </div>
+                   )
+                  }) }
                 </div>
         </div>
         </>
