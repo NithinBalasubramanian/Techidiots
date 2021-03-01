@@ -1,6 +1,7 @@
 import React , { useState , useEffect } from 'react';
 import '../../App.scss';
 import axios from '../../apiInstance/instance_book_API';
+import axiosIt from '../../apiInstance/instance_book_API_it';
 
 const BookStore = () => {
 
@@ -33,21 +34,15 @@ const BookStore = () => {
     }
     
     const fetchCont2 = () => {
-      fetch("https://book4.p.rapidapi.com/", {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-key": "3362722dd0msh014605fac24e36bp1251bcjsnf6916b501ed2",
-        "x-rapidapi-host": "book4.p.rapidapi.com"
-          }
+      axiosIt.get('')
+        .then((res) => {
+            setListdata2(res.data);
+        console.log(res.data);
+            setFetchStatus(false);
         })
-        .then(response => {
-          setListdata2(response);
-          console.log(response);
-          console.log(response.books);
+        .catch((error) => {
+            console.log(error);
         })
-        .catch(err => {
-          console.error(err);
-        });
     }
 
 
@@ -87,8 +82,25 @@ const BookStore = () => {
                     })
                 }
                 </div>
-                <h1>Fantasy Book Collections </h1><small>( Source : Rapid Api )</small>
-
+                <h1>IT Book Collections </h1><small>( Source :  )</small>
+                <div className="row">
+                { Listdata2.map((itm,k) => {
+                    return(
+                        <div className="col-md-3 bookCard" >
+                        <a href={itm.url} target="_blank">
+                            <div className="bookDisplay" key={k}>
+                                <img src={itm.image} alt="Book" width="100%" height="360px" />
+                                <h4>{itm.title}</h4>
+                                <div className="bookDesc">
+                                    {itm.subtitle}
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    )
+                    })
+                }
+                </div>
         </div>
         </>
     );
