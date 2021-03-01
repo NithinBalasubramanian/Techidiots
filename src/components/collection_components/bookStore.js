@@ -42,7 +42,8 @@ const BookStore = () => {
         })
         .then(response => {
           setListdata2(response);
-          //console.log(response);
+          console.log(response);
+          console.log(response.books);
         })
         .catch(err => {
           console.error(err);
