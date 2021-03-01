@@ -38,9 +38,23 @@ const ArticleStore = () => {
                 <div className="row">
                   { Listdata.map((itm,k) => {
                     return(
-                      <div className="col-md-4">
-                        <h3>{ itm.headline.main }</h3>
-                      </div>
+                       <div className="col-md-4 bookCard" >
+                        <a href={itm.web_url} target="_blank">
+                            <div className="bookDisplay" key={k}>
+                                <img src={itm.multimedia[0].url} alt="Book" width="100%" height="360px" />
+                                <h4>{itm.headline.main }</h4>
+                                <div class="row publish">
+                                    <div class="col-md-12">
+                                        <small>Source </small>
+                                        <small>: {itm.source}</small>
+                                    </div>
+                                </div>
+                                <div className="bookDesc">
+                                    {itm.abstract}
+                                </div>
+                            </div>
+                        </a>
+                        </div>
                    )
                   }) }
                 </div>
