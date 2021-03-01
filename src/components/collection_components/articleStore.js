@@ -9,7 +9,7 @@ const ArticleStore = () => {
 
   useEffect(() => {
     fetchAll();
-  });
+  }),[];
 
     const fetchAll = () =>{
         axios.get('')
