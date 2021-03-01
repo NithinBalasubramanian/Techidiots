@@ -1,7 +1,10 @@
 import React , { useState , useEffect } from 'react';
 import '../../App.scss';
 import axios from '../../apiInstance/instance_book_API';
-import axiosIt from '../../apiInstance/instance_book_API_it';
+
+//IT book store
+
+import ItBooks from './itBookStore';
 
 const BookStore = () => {
 
@@ -82,25 +85,7 @@ const BookStore = () => {
                     })
                 }
                 </div>
-                <h1>IT Book Collections </h1><small>( Source :  )</small>
-                <div className="row">
-                { Listdata2.map((itm,k) => {
-                    return(
-                        <div className="col-md-3 bookCard" >
-                        <a href={itm.url} target="_blank">
-                            <div className="bookDisplay" key={k}>
-                                <img src={itm.image} alt="Book" width="100%" height="360px" />
-                                <h4>{itm.title}</h4>
-                                <div className="bookDesc">
-                                    {itm.subtitle}
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    )
-                    })
-                }
-                </div>
+               <ItBooks />
         </div>
         </>
     );
