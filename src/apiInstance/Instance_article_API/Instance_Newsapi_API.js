@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const Instance_Newsapi_API = axios.create(
     { 
-        baseURL : 'http://newsapi.org/v2/everything?q=tesla&from=2021-02-01&sortBy=publishedAt&apiKey=02a02f70a5ba4d0f8a5faba69b554c2e',
+        baseURL : 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=947rE1r1XJk0TYG0wwGlubhReDHiPvb8',
     }
 )
 
