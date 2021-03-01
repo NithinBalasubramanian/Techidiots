@@ -34,7 +34,7 @@ const ArticleStore = () => {
             </div>
         </div>
         <div className="homeListContainer">
-                <h1>Article Collections </h1><small>( Source : NewYork Times )</small>
+                <h1>News Collections </h1><small>( Source : NewYork Times )</small>
                 <div className="row">
                   { Listdata.map((itm,k) => {
                       let link = "https://www.nytimes.com/";
@@ -42,7 +42,7 @@ const ArticleStore = () => {
                       let refUrl = link.concat(ref);
                     return(
                        <div className="col-md-4 bookCard" >
-                        <a href={itm.uri} target="_blank">
+                        <a href={itm.web_url} target="_blank">
                             <div className="bookDisplay" key={k}>
                                 <img src={refUrl} alt="Book" width="100%" height="300px" />
                                 <h4>{itm.headline.main }</h4>
