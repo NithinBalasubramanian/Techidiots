@@ -39,7 +39,7 @@ const ArticleStore = () => {
                   { Listdata.map((itm,k) => {
                     return(
                       <div className="col-md-4">
-                        <h1>{ itm.heading.main }</h1>
+                        <h1>{ itm.abstract }</h1>
                       </div>
                    )
                   }) }
