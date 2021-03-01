@@ -8,7 +8,7 @@ const BookStore = () => {
   
   //api data from rapid api
   
-  let [ Listdata_2 , setListdata_2 ] = useState([]);
+  let [ Listdata2 , setListdata2 ] = useState([]);
     
   let [ FetchStatus , setFetchStatus ] = useState(true);
 
@@ -40,9 +40,9 @@ const BookStore = () => {
         "x-rapidapi-host": "book4.p.rapidapi.com"
           }
         })
-        .then(res => {
-          setListdata_2(res);
-          //console.log(res);
+        .then(response => {
+          setListdata2(response);
+          //console.log(response);
         })
         .catch(err => {
           console.error(err);
@@ -88,7 +88,7 @@ const BookStore = () => {
                 </div>
                 <h1>Fantasy Book Collections </h1><small>( Source : Rapid Api )</small>
                 <div className="row">
-                { Listdata_2.map((itm,k) => {
+                { Listdata2.map((itm,k) => {
                     return(
                         <div className="col-md-3 bookCard" >
                             <div className="bookDisplay" key={k}>
