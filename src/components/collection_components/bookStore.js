@@ -9,21 +9,11 @@ import ItBooks from './itBookStore';
 const BookStore = () => {
 
   let [ Listdata , setListdata ] = useState([]);
-  
-  //api data from rapid api
-  
-  let [ Listdata2 , setListdata2 ] = useState([]);
     
   let [ FetchStatus , setFetchStatus ] = useState(true);
 
   useEffect(() => {
     fetchAll();
-    
-     const timer = setTimeout(() => {
-      fetchCont2()
-      }, 3000);
-    return () => clearTimeout(timer);
-}, [])
 
     const fetchAll = () =>{
         axios.get('')
@@ -35,19 +25,6 @@ const BookStore = () => {
             console.log(error);
         })
     }
-    
-    const fetchCont2 = () => {
-      axiosIt.get('')
-        .then((res) => {
-            setListdata2(res.data);
-        console.log(res.data);
-            setFetchStatus(false);
-        })
-        .catch((error) => {
-            console.log(error);
-        })
-    }
-
 
     return(
         <>
