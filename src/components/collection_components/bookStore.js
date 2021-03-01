@@ -94,7 +94,7 @@ const BookStore = () => {
                             <div className="bookDisplay" key={k}>
                                 <img src={itm.url} alt="Book" width="100%" height="360px" />
                                 <h4>{itm.title}</h4>
-                                <div<div class="col-md-12">
+                                <div class="col-md-12">
                                         <small>Author </small>
                                         <small>: {itm.author}</small>
                                     </div>
