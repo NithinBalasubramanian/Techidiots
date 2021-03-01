@@ -12,8 +12,8 @@ const BookStore = () => {
     fetchAll();
     
      const timer = setTimeout(() => {
-    console.log('This will run after 1 second!')
-    }, 1000);
+      fetchCont2()
+      }, 3000);
     return () => clearTimeout(timer);
 }, [])
 
@@ -26,6 +26,22 @@ const BookStore = () => {
         .catch((error) => {
             console.log(error);
         })
+    }
+    
+    const fetchCont2 = () => {
+      fetch("https://book4.p.rapidapi.com/", {
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-key": "3362722dd0msh014605fac24e36bp1251bcjsnf6916b501ed2",
+        "x-rapidapi-host": "book4.p.rapidapi.com"
+          }
+        })
+        .then(response => {
+          console.log(response);
+        })
+        .catch(err => {
+          console.error(err);
+        });
     }
 
 
