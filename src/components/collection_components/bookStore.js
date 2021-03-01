@@ -40,7 +40,7 @@ const BookStore = () => {
         "x-rapidapi-host": "book4.p.rapidapi.com"
           }
         })
-        .then(resp => {
+        .then(res => {
           setListdata_2(res);
           //console.log(res);
         })
