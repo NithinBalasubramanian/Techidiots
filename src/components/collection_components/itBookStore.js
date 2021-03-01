@@ -20,7 +20,6 @@ const ItBookStore = () => {
         .then((res) => {
             setListdata(res.data);
            console.log(res.data);
-            setFetchStatus(false);
         })
         .catch((error) => {
             console.log(error);
