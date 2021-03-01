@@ -4,7 +4,7 @@ import axios from '../../apiInstance/instance_book_API';
 
 //IT book store
 
-import ItBooks from './itBookStore';
+// import ItBooks from './itBookStore';
 
 const BookStore = () => {
 
@@ -63,7 +63,6 @@ const BookStore = () => {
                     })
                 }
                 </div>
-               <ItBooks />
         </div>
         </>
     );
