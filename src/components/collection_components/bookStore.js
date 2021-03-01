@@ -88,26 +88,7 @@ const BookStore = () => {
                 }
                 </div>
                 <h1>Fantasy Book Collections </h1><small>( Source : Rapid Api )</small>
-//                 <div className="row">
-//                 { Listdata2.map((itm,k) => {
-//                     return(
-//                         <div className="col-md-3 bookCard" >
-//                             <div className="bookDisplay" key={k}>
-//                                 <img src={itm.url} alt="Book" width="100%" height="360px" />
-//                                 <h4>{itm.title}</h4>
-//                                 <div class="col-md-12">
-//                                         <small>Author </small>
-//                                         <small>: {itm.author}</small>
-//                                  </div>
-//                                 <div className="bookDesc">
-//                                     {itm.detail}
-//                                 </div>
-//                             </div>
-//                         </div>
-//                     )
-//                     })
-//                 }
-//              </div>
+
         </div>
         </>
     );
