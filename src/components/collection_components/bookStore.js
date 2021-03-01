@@ -11,10 +11,10 @@ const BookStore = () => {
   useEffect(() => {
     fetchAll();
     
-    setTimeout(
-      () => alert("hello"), 
-      1000
-    );
+     const timer = setTimeout(() => {
+    console.log('This will run after 1 second!')
+    }, 1000);
+    return () => clearTimeout(timer);
 }, [])
 
     const fetchAll = () =>{
