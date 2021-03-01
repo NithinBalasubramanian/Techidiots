@@ -14,7 +14,7 @@ const BookStore = () => {
 
   useEffect(() => {
     fetchAll();
-  }
+  });
 
     const fetchAll = () =>{
         axios.get('')
