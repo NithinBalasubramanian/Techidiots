@@ -14,6 +14,7 @@ const BookStore = () => {
 
   useEffect(() => {
     fetchAll();
+  }
 
     const fetchAll = () =>{
         axios.get('')
@@ -25,7 +26,7 @@ const BookStore = () => {
             console.log(error);
         })
     }
-
+    
     return(
         <>
         <div className={(FetchStatus) ? "preLoader" : "preNone" } >
