@@ -97,8 +97,7 @@ const BookStore = () => {
                                 <div class="col-md-12">
                                         <small>Author </small>
                                         <small>: {itm.author}</small>
-                                    </div>
-                                </div>
+                                 </div>
                                 <div className="bookDesc">
                                     {itm.detail}
                                 </div>
