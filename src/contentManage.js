@@ -2,6 +2,7 @@ import React from 'react';
 import './style.scss';
 import HomeListoutComponent from './components/own_components/homeListoutComponent';
 import BookStore from './components/collection_components/bookStore';
+import ArticleStore from './components/collection_components/articleStore';
 import { Switch , Route } from 'react-router-dom';
 
 const ContentManager = () => {
@@ -12,7 +13,7 @@ const ContentManager = () => {
         <HomeListoutComponent />
       </Route>
       <Route path="/News" >
-        <HomeListoutComponent />
+        <ArticleStore />
       </Route>
       <Route path="/Books" >
         <BookStore />
