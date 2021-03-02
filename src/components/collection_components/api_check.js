@@ -11,7 +11,7 @@ const options = {
     'x-rapidapi-key': '3362722dd0msh014605fac24e36bp1251bcjsnf6916b501ed2',
     'x-rapidapi-host': 'Guardianmikilior1V1.p.rapidapi.com'
   },
-  data: {query: 'buisness', apiKey: '<REQUIRED>'}
+  data: {query: 'buisness'}
 };
 
 axios.request(options).then(function (response) {
