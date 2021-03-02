@@ -3,6 +3,7 @@ import './style.scss';
 import HomeListoutComponent from './components/own_components/homeListoutComponent';
 import BookStore from './components/collection_components/bookStore';
 import ArticleStore from './components/collection_components/articleStore';
+import ApiTest from './components/collection_components/api_check';
 import { Switch , Route } from 'react-router-dom';
 
 const ContentManager = () => {
@@ -17,6 +18,9 @@ const ContentManager = () => {
       </Route>
       <Route path="/Books" >
         <BookStore />
+      </Route>
+      <Route path="/ApiTest" >
+        <ApiTest />
       </Route>
     </Switch>
     </div>
