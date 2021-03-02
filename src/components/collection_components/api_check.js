@@ -2,15 +2,16 @@ import axios from "axios";
 
 
 const ApiTest = () => {
+
 const options = {
   method: 'POST',
-  url: 'https://guardianmikilior1v1.p.rapidapi.com/getTags',
+  url: 'https://guardianmikilior1v1.p.rapidapi.com/getEditions',
   headers: {
     'content-type': 'application/x-www-form-urlencoded',
     'x-rapidapi-key': '3362722dd0msh014605fac24e36bp1251bcjsnf6916b501ed2',
     'x-rapidapi-host': 'Guardianmikilior1V1.p.rapidapi.com'
   },
-  data: {apiKey: '<REQUIRED>'}
+  data: {query: 'buisness', apiKey: '<REQUIRED>'}
 };
 
 axios.request(options).then(function (response) {
@@ -18,7 +19,6 @@ axios.request(options).then(function (response) {
 }).catch(function (error) {
 	console.error(error);
 });
-  
   
   return(
     <div>
