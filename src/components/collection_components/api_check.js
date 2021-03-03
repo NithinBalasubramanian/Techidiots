@@ -3,18 +3,7 @@ import axios from "axios";
 
 const ApiTest = () => {
 
-const options = {
-  method: 'POST',
-  url: 'https://guardianmikilior1v1.p.rapidapi.com/getEditions',
-  headers: {
-    'content-type': 'application/x-www-form-urlencoded',
-    'x-rapidapi-key': '3362722dd0msh014605fac24e36bp1251bcjsnf6916b501ed2',
-    'x-rapidapi-host': 'Guardianmikilior1V1.p.rapidapi.com'
-  },
-  data: {query: 'buisness'}
-};
-
-axios.request(options).then(function (response) {
+axios.get("http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=02a02f70a5ba4d0f8a5faba69b554c2e").then(function (response) {
 	console.log(response.data);
 }).catch(function (error) {
 	console.error(error);
