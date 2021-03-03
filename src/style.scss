@@ -249,15 +249,53 @@ footer{
 //media 980px
 
 @media screen and (max-width: 680px){
-  .NavListMenu{
-    display:none;
+  .NavbarMain{
+  
+  h2{
+    font-size:22px;
+    padding:10px;
+    color:$logoColor;
+  }
+  
+  .NavContainer{
+    width:90%;
+    margin:0px auto;
+    
+    .NavList{
+       width:100%;
+      margin-top:17px;
+      
+      .NavListMenu{
+        display:none;
+        }
+      }
+    }
   }
 }
 
 //media 680px
 
 @media screen and (max-width: 680px){
-  .NavListMenu{
-    display:none;
-  }
+  .NavbarMain{
+  
+    h2{
+      font-size:22px;
+      padding:10px;
+      color:$logoColor;
+    }
+
+    .NavContainer{
+      width:90%;
+      margin:0px auto;
+
+      .NavList{
+         width:100%;
+        margin-top:17px;
+
+        .NavListMenu{
+          display:none;
+          }
+        }
+      }
+    }
 }
