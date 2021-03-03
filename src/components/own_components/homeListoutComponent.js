@@ -42,31 +42,27 @@ const HomeListoutComponent = () => {
                 if(k === 0 || k === 1 || k === 8 || k === 9 || k === 19 || k=== 20){
                     return(
                     <div className="col-md-6 card_col" >
-                      <div className="bookCard" >
-                        <a href={refUrl} target="_blank">
-                          <div className="bookDisplay" key={k}>
+                        <div className="card_home">
+                            <a href={refUrl}>
                                 <img src={itm.imgUrl} alt="img" width="100%" height="300px" /> 
                                 <h4>{itm.title}</h4>
                                 <div className="byAuth">
                                     - by {itm.auther} 
                                 </div>
-                            </div>
-                          </a>
-                      </div>                        
-                  </div>
+                            </a>
+                        </div>                        
+                    </div>
                     )
                 }
                 return(
                     <div className="col-md-4 card_col">
-                        <div className="bookCard" >
-                            <a href={refUrl} target="_blank">
-                              <div className="bookDisplay" key={k}>
+                        <div className="card_home">
+                            <a href={refUrl}>
                                 <img src={itm.imgUrl} alt="img" width="100%" height="250px" /> 
                                 <h4>{itm.title}</h4>
                                 <div className="byAuth">
                                     - by {itm.auther} 
                                 </div>
-                              </div>
                             </a>
                         </div>
                     </div>
