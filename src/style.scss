@@ -244,6 +244,48 @@ footer{
   }
 }
 
+
+//page view
+
+
+.blogContent{
+  padding:0px 0px;    
+  display: flex;
+  flex-wrap: wrap;
+
+h1{
+  padding:10px 0px 20px 0px;
+  font-family: 'Playfair Display', serif;
+  color:#151F2D;
+}
+
+p{
+  padding:25px 0px;
+  color:#4d4752;
+  text-indent:30px;
+  text-align:justify;
+  letter-spacing: 1px;
+  line-height: 30px;
+  font-size:18px;
+  font-family: 'Crimson Text', serif;
+}
+
+.byAuth{
+  font-size: 14px;
+  font-weight: 400;
+  color:#afa7b5;
+  padding: 15px 0px 20px 0px;
+    small{
+    font-size: 14px;
+    font-weight: 400;
+    float:right;
+  }
+}
+}
+
+
+
+
 //Media 1020px
 
 //media 980px
