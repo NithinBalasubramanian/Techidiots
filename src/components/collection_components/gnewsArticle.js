@@ -50,7 +50,7 @@ const GnewsArticle = () => {
                                     </div>
                                 </div>
                                 <div className="bookDesc">
-                                    {itm.content}
+                                    {itm.description}
                                 </div>
                             </div>
                         </a>
