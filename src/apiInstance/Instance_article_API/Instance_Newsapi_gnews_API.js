@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const Instance_Newsapi_API = axios.create(
+const Instance_Newsapi_gnews_API = axios.create(
     { 
-        baseURL : 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=947rE1r1XJk0TYG0wwGlubhReDHiPvb8',
+        baseURL : 'https://gnews.io/api/v4/top-headlines?lang=en&token=9f8cd16e6ad80b74e7b771a5de4be9bd',
     }
 )
 
-export default Instance_Newsapi_API;
+export default Instance_Newsapi_gnews_API;
