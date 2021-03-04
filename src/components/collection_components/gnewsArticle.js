@@ -14,8 +14,8 @@ const GnewsArticle = () => {
     const fetchAll = () =>{
         axios.get('')
         .then((res) => {
-            setListdata(res.data.response.docs);
-          console.log(res.data.response.docs);
+            setListdata(res.data.articles);
+          console.log(res.data.articles);
             setFetchStatus(false);
         })
         .catch((error) => {
@@ -36,7 +36,27 @@ const GnewsArticle = () => {
         <div className="homeListContainer">
                 <h1>Latest Collections </h1><small></small>
                 <div className="row">
-                 
+                 { Listdata.map((itm,k) => {
+                    return(
+                       <div className="col-md-4 bookCard" >
+                        <a href={itm.url} target="_blank">
+                            <div className="bookDisplay" key={k}>
+                                <img src={itm.image} alt="Book" width="100%" height="300px" />
+                                <h4>{itm.title }</h4>
+                                <div class="row publish">
+                                    <div class="col-md-12">
+                                        <small>Source </small>
+                                        <small>: {itm.source.name}</small>
+                                    </div>
+                                </div>
+                                <div className="bookDesc">
+                                    {itm.content}
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                   )
+                  }) }
                 </div>
         </div>
         </>
