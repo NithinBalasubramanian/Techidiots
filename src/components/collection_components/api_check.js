@@ -3,7 +3,7 @@ import axios from "axios";
 
 const ApiTest = () => {
 
-axios.get("http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=02a02f70a5ba4d0f8a5faba69b554c2e").then(function (response) {
+axios.get("https://gnews.io/api/v4/search?q=example&token=9f8cd16e6ad80b74e7b771a5de4be9bd").then(function (response) {
 	console.log(response.data);
 }).catch(function (error) {
 	console.error(error);
