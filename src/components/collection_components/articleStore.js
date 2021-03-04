@@ -34,6 +34,10 @@ const ArticleStore = () => {
                 </div>
             </div>
         </div>
+//     gnews API Fetch
+        <GnewsArticle />
+                      
+//     Newyork time fetch
         <div className="homeListContainer">
                 <h1>News Collections </h1><small>( Source : NewYork Times )</small>
                 <div className="row">
@@ -63,7 +67,6 @@ const ArticleStore = () => {
                   }) }
                 </div>
         </div>
-        <GnewsArticle />
         </>
     );
 }
