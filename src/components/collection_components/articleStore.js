@@ -1,5 +1,6 @@
 import React , { useState , useEffect } from 'react';
 import '../../App.scss';
+import GnewsArticle from './gnewsArticle';
 import axios from '../../apiInstance/Instance_article_API/Instance_Newsapi_API';
 
 const ArticleStore = () => {
@@ -62,6 +63,7 @@ const ArticleStore = () => {
                   }) }
                 </div>
         </div>
+        <GnewsArticle />
         </>
     );
 }
