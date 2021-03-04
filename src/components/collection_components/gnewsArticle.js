@@ -36,27 +36,7 @@ const GnewsArticle = () => {
         <div className="homeListContainer">
                 <h1>Latest Collections </h1><small></small>
                 <div className="row">
-                  { Listdata.map((itm,k) => {
-                    return(
-                       <div className="col-md-4 bookCard" >
-                        <a href={itm.web_url} target="_blank">
-                            <div className="bookDisplay" key={k}>
-                                <img src={refUrl} alt="Book" width="100%" height="300px" />
-                                <h4>{itm.headline.main }</h4>
-                                <div class="row publish">
-                                    <div class="col-md-12">
-                                        <small>Source </small>
-                                        <small>: {itm.source}</small>
-                                    </div>
-                                </div>
-                                <div className="bookDesc">
-                                    {itm.abstract}
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                   )
-                  }) }
+                 
                 </div>
         </div>
         </>
