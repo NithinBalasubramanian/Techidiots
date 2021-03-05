@@ -41,8 +41,9 @@ const ArticleStore = () => {
                 <div className="row">
                   { Listdata.map((itm,k) => {
                       let link = "https://www.nytimes.com/";
-                      let ref = itm.multimedia.0.url;
+                      let ref = itm.multimedia[0].url;
                       let refUrl = link.concat(ref);
+                   console.log(refUrl);
                     return(
                        <div className="col-md-4 bookCard" >
                         <a href={itm.web_url} target="_blank">
