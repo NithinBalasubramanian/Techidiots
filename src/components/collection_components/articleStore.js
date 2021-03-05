@@ -41,7 +41,7 @@ const ArticleStore = () => {
                 <div className="row">
                   { Listdata.map((itm,k) => {
                       let link = "https://www.nytimes.com/";
-                      let ref = itm.multimedia[0].url;
+                      let ref = itm.multimedia.0.url;
                       let refUrl = link.concat(ref);
                     return(
                        <div className="col-md-4 bookCard" >
