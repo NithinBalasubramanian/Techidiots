@@ -89,7 +89,8 @@ let {url} = useParams();
                                     </Link>
                                 </div>
                             )
-                        })}
+                        })
+                        }
                     </div>
                 </div>
             </div>
