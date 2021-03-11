@@ -1,11 +1,11 @@
 import React , { useState , useEffect } from 'react';
-// import { useParams } from 'react-router';
+import { useParams } from 'react-router';
 import axios from '../../apiInstance/instance_API';
 import { Link } from 'react-router-dom';
 
 const BlogView = () => {
 
-// let {url} = useParams();
+    let {url} = useParams();
 
     const [ datas , setDatas ] = useState([]);
 
@@ -14,14 +14,14 @@ const BlogView = () => {
      let [ FetchStatus , setFetchStatus ] = useState(true);
     
     const Fetchdata = () => {
-//         axios.get('/view/'+url)
-//         .then( res => {
-//             setDatas(res.data);
-//             setFetchStatus(false);
-//         })
-//         .catch( err => {
-//             console.log(err);
-//         })
+        axios.get('/view/'+url)
+        .then( res => {
+            setDatas(res.data);
+            setFetchStatus(false);
+        })
+        .catch( err => {
+            console.log(err);
+        })
     }
     
     const getDate = (date) => {
@@ -29,19 +29,19 @@ const BlogView = () => {
     }
 
     const FetchdataNot = () => {
-//         axios.get('/recent/'+url)
-//         .then( res => {
-//             setRecent(res.data);
-//         })
-//         .catch( err => {
-//             console.log(err);
-//         })
+        axios.get('/recent/'+url)
+        .then( res => {
+            setRecent(res.data);
+        })
+        .catch( err => {
+            console.log(err);
+        })
     }
 
     useEffect(()=>{
         Fetchdata();
         FetchdataNot();
-    }, []) //place url in square bracket
+    }, [url]) 
     
   return(
     <>
