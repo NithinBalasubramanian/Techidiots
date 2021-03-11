@@ -4,6 +4,7 @@ $logoColor : #fff;
 $menuColor : #fff;
 $cardColor : #f2fffa;
 $activeColor :#05361d ;
+$hoverColor : #c4ffd9;
 
 
 //preloader
@@ -200,7 +201,7 @@ footer{
       }
 
       .card_home:hover{
-        background-color:$primaryColor;
+        background-color:$hoverColor;
       }
     }
 
@@ -266,7 +267,7 @@ h1{
 }
   
   .preheading p{
-    color:$primaryColor;
+    color:#86bd99;
     font-weight:200;
   }
   
@@ -337,6 +338,10 @@ p{
           padding:10px;
         }
       }
+    }
+    
+    .card_recent:hover{
+      background-color:$hoverColor;
     }
   }
 }
