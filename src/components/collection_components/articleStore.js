@@ -40,11 +40,10 @@ const ArticleStore = () => {
                 <h1>News Collections </h1><small>( Source : NewYork Times )</small>
                 <div className="row">
                   { Listdata.map((itm,k) => {
-                   console.log(itm.multimedia);
+                   console.log(itm.multimedia[0]);
                       let link = "https://www.nytimes.com/";
                       let ref = "";
                       let refUrl = link.concat(ref);
-                   console.log(refUrl);
                     return(
                        <div className="col-md-4 bookCard" >
                         <a href={itm.web_url} target="_blank">
