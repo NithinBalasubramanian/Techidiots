@@ -92,8 +92,8 @@ const BlogView = () => {
                         <h4>Recent Blog</h4>
                         {recent.map((itm,k) => {
                             return (
-                                <div className="card_recent bookCard">
-                                    <Link to={'/Blog/'+itm.url}  className="bookDisplay">
+                                <div className="card_recent ">
+                                    <Link to={'/Blog/'+itm.url}  >
                                         <img src={itm.imgUrl} width="100%" height="150px" alt=""></img>
                                         <h5>{itm.title}</h5>
                                     </Link>
