@@ -39,6 +39,7 @@ const BlogView = () => {
     }
 
     useEffect(()=>{
+        setFetchStatus(true);
         Fetchdata();
         FetchdataNot();
     }, [url]) 
