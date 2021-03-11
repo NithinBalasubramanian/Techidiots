@@ -296,7 +296,8 @@ p{
       height:auto;
       padding:12px 0px;
       border-radius:5px;
-      border:2px solid $primaryColor;
+      border-bottom:2px solid $primaryColor;
+      margin-bottom:20px;
     }
   }
 }
