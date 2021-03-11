@@ -43,10 +43,11 @@ const HomeListoutComponent = () => {
                         <div className="card_home">
                             <Link to={'/Blog/'+itm.url} exact >
                                 <img src={itm.imgUrl} alt="img" width="100%" height="300px" /> 
-                                <h4>{itm.title}</h4>
                                 <div className="byAuth">
                                     - by {itm.auther} 
                                 </div>
+                                <h4>{ itm.title }</h4>
+                                <p>{ itm.preheading } </p>
                             </Link>
                         </div>                        
                     </div>
@@ -57,10 +58,11 @@ const HomeListoutComponent = () => {
                         <div className="card_home">
                             <Link to={'/Blog/'+itm.url} exact >
                                 <img src={itm.imgUrl} alt="img" width="100%" height="250px" /> 
-                                <h4>{itm.title}</h4>
                                 <div className="byAuth">
                                     - by {itm.auther} 
                                 </div>
+                                <h4>{ itm.title }</h4>
+                                <p>{ itm.preheading } </p>
                             </Link>
                         </div>
                     </div>
