@@ -40,8 +40,9 @@ const ArticleStore = () => {
                 <h1>News Collections </h1><small>( Source : NewYork Times )</small>
                 <div className="row">
                   { Listdata.map((itm,k) => {
+                   console.log(itm.multimedia);
                       let link = "https://www.nytimes.com/";
-                      let ref = itm.multimedia[0].url;
+                      let ref = "";
                       let refUrl = link.concat(ref);
                    console.log(refUrl);
                     return(
