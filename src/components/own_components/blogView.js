@@ -89,7 +89,6 @@ const BlogView = () => {
                 }) }
                 <div className="col-md-4 row recent">
                     <div class="recent_part">
-                        <h4>Recent Blog</h4>
                         {recent.map((itm,k) => {
                             return (
                                 <div className="card_recent ">
