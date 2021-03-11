@@ -283,7 +283,23 @@ p{
 }
 }
 
+//Recent side design
 
+.recent{
+  
+  .recent_part{
+    width:96%;
+    float:right;
+    
+    .card_recent{
+      width:100%;
+      height:auto;
+      padding:12px 0px;
+      border-radius:5px;
+      border:2px solid $primaryColor;
+    }
+  }
+}
 
 
 //Media 1020px
