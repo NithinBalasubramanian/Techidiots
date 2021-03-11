@@ -169,7 +169,7 @@ footer{
 
       .card_home{
         width:98%;
-        height:500px;
+        height:100%;
         border-radius:10px;
         overflow:hidden;
         background-color:$cardColor;
@@ -183,8 +183,13 @@ footer{
 
         h4{
           padding:10px;
-          height:150px;
+          height:auto;
           color:$HeadingColor;
+        }
+        
+        p{
+          color:$primaryColor;
+          padding:15px 10px;
         }
 
         .byAuth{
