@@ -84,7 +84,6 @@ const BlogView = () => {
                                    : null }
                             </div>
                         </div>
-                        </div>
                     )
                 }) }
                 <div className="col-md-4 row recent">
