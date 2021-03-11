@@ -58,7 +58,7 @@ const BlogView = () => {
                 { datas.map((itm,k) => { 
                     document.title=itm.title;
                     return(
-                        <div>
+                        <>
                         <div className="col-md-12">
                             <h1>{itm.title}</h1>
                         </div>
@@ -83,7 +83,7 @@ const BlogView = () => {
                                     })
                                    : null }
                             </div>
-                        </div>
+                        </>
                     )
                 }) }
                 <div className="col-md-4 row recent">
