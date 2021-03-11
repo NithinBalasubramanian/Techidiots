@@ -288,8 +288,10 @@ p{
 .recent{
   
   .recent_part{
-    width:96%;
+    width:94%;
     float:right;
+    margin-right:0px;
+    margin-left:auto;
     
     .card_recent{
       width:100%;
