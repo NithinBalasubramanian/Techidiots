@@ -5,6 +5,7 @@ $menuColor : #fff;
 $cardColor : #f2fffa;
 $activeColor :#05361d ;
 $hoverColor : #c4ffd9;
+$secondaryFont : #1D976C;
 
 
 //preloader
@@ -189,7 +190,7 @@ footer{
         }
         
         p{
-          color:#86bd99;
+          color:$secondaryFont;
           padding:15px 10px;
         }
 
@@ -267,7 +268,7 @@ h1{
 }
   
   .preheading p{
-    color:$primaryColor;
+    color:$secondaryFont;
     font-weight:200;
   }
   
