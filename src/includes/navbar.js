@@ -2,6 +2,8 @@ import React from 'react';
 import '../style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
+import { BiMenuAltLeft } from 'react-icons/bi';
+
 
 
 const Navbar = () => {
@@ -10,6 +12,7 @@ const Navbar = () => {
         <div className="NavContainer row">
             <div className="col-md-4">
                 <h2>Tech Idiots</h2> 
+                <BiMenuAltLeft />
             </div>
         <div className="col-md-8">
             <div className="NavList">
