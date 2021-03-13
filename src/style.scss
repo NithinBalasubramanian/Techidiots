@@ -90,6 +90,19 @@ $bounce_height: 30px;
   position:fixed;
   z-index:1001;
   
+  .navHead{
+    width:100%;
+    display:flex;
+    
+    .navHeadLogo{
+      width:100%;
+    }
+    .navHeadMenu{
+      width:20%;
+      display:none;
+    }
+  }
+  
   h2{
     font-size:28px;
     padding:10px;
@@ -353,7 +366,7 @@ p{
 
 //media 980px
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 980px){
   .NavbarMain{
   
   h2{
@@ -373,6 +386,24 @@ p{
       .NavListMenu{
         display:none;
         }
+      }
+    }
+  }
+  
+  .navHead{
+    width:100%;
+    display:flex;
+    
+    .navHeadLogo{
+      width:100%;
+    }
+    .navHeadMenu{
+      width:20%;
+      display:block;
+      
+      i{
+        font-size:20px;
+        color:$primaryColor;
       }
     }
   }
