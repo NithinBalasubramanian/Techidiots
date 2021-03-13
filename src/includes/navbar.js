@@ -8,7 +8,7 @@ import { BiMenuAltLeft } from 'react-icons/bi';
 
 const Navbar = () => {
     
-    const sidebarStatusHandler => {
+    const sidebarStatusHandler = () => {
            console.log("Sidebar On");    
     }
     
