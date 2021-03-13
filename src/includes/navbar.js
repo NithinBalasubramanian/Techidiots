@@ -7,12 +7,21 @@ import { BiMenuAltLeft } from 'react-icons/bi';
 
 
 const Navbar = () => {
+    
+    const sidebarStatusHandler => {
+           console.log("Sidebar");    
+    }
+    
     return(
       <div className="NavbarMain">
         <div className="NavContainer row">
-            <div className="col-md-4">
-                <h2>Tech Idiots</h2> 
-                <BiMenuAltLeft />
+            <div className="col-md-4 navHead">
+                <div className="navHeadLogo">
+                    <h2>Tech Idiots</h2> 
+                </div>
+                <div className="navHeadMenu">
+                    <BiMenuAltLeft onClick={ sidebarStatusHandler }  size="40px" color="#fff" style={{margin:"10px"}}/>
+                </div>
             </div>
         <div className="col-md-8">
             <div className="NavList">
