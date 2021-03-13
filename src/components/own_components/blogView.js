@@ -2,6 +2,7 @@ import React , { useState , useEffect } from 'react';
 import { useParams } from 'react-router';
 import axios from '../../apiInstance/instance_API';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 const BlogView = () => {
 
@@ -68,11 +69,11 @@ const BlogView = () => {
                                 <p style={ {padding:'10px 0px',margin:'0px'} }>{itm.preheading}</p>
                             </div>
                             <div className="byAuth">
-                                - by {itm.auther} 
-                            <small>{ getDate(itm.createdOn) }</small>
+                                - From {itm.auther} 
+                            <small>{ moment(itm.createdOn).fromNow() }</small>
                             </div>
                             {/* <img src={itm.filePath} alt="img" width="100%" height="auto" /> */}
-                            <img src={itm.imgUrl} alt="img" width="100%" height="auto" /> 
+                            <img src={itm.imgUrl} alt={ itm.title } width="100%" height="auto" /> 
                             
                              <div className="contentDisp">
                                 <p className="paraMainCont">{itm.blog}</p>
@@ -93,7 +94,7 @@ const BlogView = () => {
                         {recent.map((itm,k) => {
                             return (
                                 <div className="card_recent ">
-                                    <Link to={'/Blog/'+itm.url}  >
+                                    <Link to={ `/Blog/${itm.url}` }  >
                                         <img src={itm.imgUrl} width="100%" height="150px" alt=""></img>
                                         <h5>{itm.title}</h5>
                                     </Link>

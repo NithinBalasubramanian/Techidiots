@@ -107,6 +107,7 @@ $bounce_height: 30px;
     font-size:28px;
     padding:10px;
     color:$logoColor;
+    margin:0px;
   }
   
   .NavContainer{
@@ -381,7 +382,7 @@ p{
     
     .NavList{
        width:100%;
-      margin-top:17px;
+      margin-top:0px;
       
       .NavListMenu{
         display:none;
@@ -390,6 +391,7 @@ p{
     }
   }
   .NavbarMain{
+
     .navHead{
       width:100%;
       display:flex;
@@ -406,6 +408,13 @@ p{
   .NavbarMain .NavContainer{
     width:96%;
   }
+
+  .mobileNav{
+    width:100%;
+    height:640px;
+    background-color:black;
+    position:fixed;
+  }
 }
 
 //media 680px
@@ -415,17 +424,17 @@ p{
   
     h2{
       font-size:22px;
-      padding:10px;
+      padding:16px;
       color:$logoColor;
     }
 
     .NavContainer{
-      width:90%;
+      width:98%;
       margin:0px auto;
 
       .NavList{
          width:100%;
-        margin-top:17px;
+        margin-top:0px;
 
         .NavListMenu{
           display:none;
@@ -433,4 +442,21 @@ p{
         }
       }
     }
+
+    .contMain{
+       .homeListContainer{
+          width:98%;
+
+          .blogContent h1{
+            font-size:30px;
+
+            .preheading p{
+              font-size:16px;
+            }
+          }
+       }
+      }
+      footer .footer_container .copyCont{
+        font-size:10px;
+      }
 }

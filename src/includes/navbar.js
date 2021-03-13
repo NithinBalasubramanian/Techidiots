@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { useState } from 'react';
 import '../style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
@@ -7,9 +7,11 @@ import { BiMenuAltLeft } from 'react-icons/bi';
 
 
 const Navbar = () => {
+
+    let { display_status , setDisplay_status } = useState(false);
     
-    const sidebarStatusHandler = () => {
-           console.log("Sidebar On");    
+    const sidebarStatusHandler = () =>{
+        setDisplay_status(!display_status);
     }
     
     return(
@@ -23,15 +25,18 @@ const Navbar = () => {
                     <BiMenuAltLeft onClick={ sidebarStatusHandler }  size="40px" color="#fff" style={{margin:"10px"}}/>
                 </div>
             </div>
-        <div className="col-md-8">
-            <div className="NavList">
-                <ul className="NavListMenu">
-                    <li><NavLink to="/" activeClassName="activeMenu" exact>HOME</NavLink></li>
-                    <li><NavLink to="/News" activeClassName="activeMenu">NEWS</NavLink></li>
-                    <li><NavLink to="/Books" activeClassName="activeMenu">BOOKS</NavLink></li>
-                </ul>
+            <div className="col-md-8">
+                <div className="NavList">
+                    <ul className="NavListMenu">
+                        <li><NavLink to="/" activeClassName="activeMenu" exact>HOME</NavLink></li>
+                        <li><NavLink to="/News" activeClassName="activeMenu">NEWS</NavLink></li>
+                        <li><NavLink to="/Books" activeClassName="activeMenu">BOOKS</NavLink></li>
+                    </ul>
+                </div>
             </div>
         </div>
+        <div className={ (display_status) ? 'mobileNav mobOn' : 'mobileNav'}>
+
         </div>
       </div>
       )

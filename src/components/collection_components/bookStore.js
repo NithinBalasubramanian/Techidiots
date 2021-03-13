@@ -45,7 +45,7 @@ const BookStore = () => {
                         <div className="col-md-3 bookCard" >
                         <a href={itm.amazon_product_url} target="_blank">
                             <div className="bookDisplay" key={k}>
-                                <img src={itm.book_image} alt="Book" width="100%" height="360px" />
+                                <img src={itm.book_image} alt={itm.title} width="100%" height="360px" />
                                 <h4>{itm.title}</h4>
                                 <div class="row publish">
                                     <div class="col-md-12">

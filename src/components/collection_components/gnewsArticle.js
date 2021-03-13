@@ -41,7 +41,7 @@ const GnewsArticle = () => {
                        <div className="col-md-4 bookCard" >
                         <a href={itm.url} target="_blank">
                             <div className="bookDisplay" key={k}>
-                                <img src={itm.image} alt="Book" width="100%" height="300px" />
+                                <img src={itm.image} alt={itm.title } width="100%" height="300px" />
                                 <h4>{itm.title }</h4>
                                 <div class="row publish">
                                     <div class="col-md-12">
