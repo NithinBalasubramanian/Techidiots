@@ -362,6 +362,10 @@ p{
   }
 }
 
+.mobileNav{
+  display:none;
+}
+
 
 //Media 1020px
 
@@ -414,6 +418,31 @@ p{
     height:640px;
     background-color:black;
     position:fixed;
+    display:none;
+
+    .NavListMob{
+      width: 90%;
+      margin:20px auto;
+
+      .NavListMenuMob{
+        text-align:center;
+        padding:0px;
+
+        li{
+          list-style:none;
+          font-size:20px;
+          padding:12px 0px;
+
+          a{
+            text-decoration: none;
+            color:#fff;
+          }
+        }
+      }
+    }
+  }
+  .mobOn{
+    display:block;
   }
 }
 
@@ -445,7 +474,7 @@ p{
 
     .contMain{
        .homeListContainer{
-          width:98%;
+          width:90%;
 
           .blogContent h1{
             font-size:30px;
@@ -458,5 +487,8 @@ p{
       }
       footer .footer_container .copyCont{
         font-size:10px;
+      }
+      .contMain .homeListContainer .card_col .card_home{
+        width:100%;
       }
 }

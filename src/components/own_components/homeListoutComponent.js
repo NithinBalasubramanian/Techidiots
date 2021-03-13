@@ -59,7 +59,7 @@ const HomeListoutComponent = () => {
                             <Link to={`/Blog/${itm.url}`} exact >
                                 <img src={itm.imgUrl} alt={ itm.title } width="100%" height="250px" /> 
                                 <div className="byAuth">
-                                    - From {itm.auther} 
+                                - From {itm.auther} 
                                 </div>
                                 <h4>{ itm.title }</h4>
                                 <p>{ itm.preheading } </p>

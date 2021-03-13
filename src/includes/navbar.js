@@ -8,7 +8,7 @@ import { BiMenuAltLeft } from 'react-icons/bi';
 
 const Navbar = () => {
 
-    let { display_status , setDisplay_status } = useState(false);
+    let [ display_status , setDisplay_status ] = useState(false);
     
     const sidebarStatusHandler = () =>{
         setDisplay_status(!display_status);
@@ -36,7 +36,13 @@ const Navbar = () => {
             </div>
         </div>
         <div className={ (display_status) ? 'mobileNav mobOn' : 'mobileNav'}>
-
+            <div className="NavListMob">
+                <ul className="NavListMenuMob">
+                    <li><NavLink to="/" activeClassName="activeMenu" exact>HOME</NavLink></li>
+                    <li><NavLink to="/News" activeClassName="activeMenu">NEWS</NavLink></li>
+                    <li><NavLink to="/Books" activeClassName="activeMenu">BOOKS</NavLink></li>
+                </ul>
+            </div>
         </div>
       </div>
       )
