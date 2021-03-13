@@ -275,7 +275,6 @@ h1{
 p{
   padding:5px 0px;
   color:#4d4752;
-  text-indent:30px;
   text-align:justify;
   letter-spacing: 1px;
   line-height: 30px;
@@ -286,10 +285,12 @@ p{
 
   .paraMainCont{
     margin-top:15px;
+    text-indent:30px;
   }
   
   .paraSubCont{
     margin:5px 0px;
+    text-indent:0px;
   }
 
 .byAuth{
