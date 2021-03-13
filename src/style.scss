@@ -389,21 +389,17 @@ p{
       }
     }
   }
-  
-  .navHead{
-    width:100%;
-    display:flex;
-    
-    .navHeadLogo{
+  .NavbarMain{
+    .navHead{
       width:100%;
-    }
-    .navHeadMenu{
-      width:20%;
-      display:block;
-      
-      i{
-        font-size:20px;
-        color:$primaryColor;
+      display:flex;
+
+      .navHeadLogo{
+        width:100%;
+      }
+      .navHeadMenu{
+        width:20%;
+        display:block;
       }
     }
   }
