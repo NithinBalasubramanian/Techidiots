@@ -55,7 +55,7 @@ const BlogView = () => {
               </div>
           </div>
       </div>
-      <div className="homeListContainer">
+      <div className="pageContainer">
             <div className="blogContent">
                 { datas.map((itm,k) => { 
                     document.title=itm.title;
