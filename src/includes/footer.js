@@ -9,7 +9,7 @@ const Footer = () => {
     return(
         <footer>
           <div className="footer_container">
-            <p className="copyCont">2020 - { Year } - &copy; || All Right Reserved <br />
+            <p className="copyCont">2020 - { Year } - &copy; || All Right Reserved  <br/>
             || TECH IDIOTS ||</p>
           </div>
         </footer>
