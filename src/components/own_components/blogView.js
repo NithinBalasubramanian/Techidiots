@@ -81,7 +81,7 @@ const BlogView = () => {
                                        itm.subPara.map((sub_itm,s_k) => {
                                        (itm.subImgUrl) ? 
                                            (s_k === 5) ?
-                                               return (
+                                                (
                                                     <>
                                                      <img src={itm.subImgUrl} alt={ itm.title } width="100%" height="auto" /> 
                                                     </>
