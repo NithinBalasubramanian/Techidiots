@@ -61,6 +61,11 @@ const BlogView = () => {
             <div className="blogContent">
                 { datas.map((itm,k) => { 
                     document.title=itm.title;
+                    if(itm.VideoLink){
+                     let videoPlayer = return( <ReactPlayer url={itm.videoLink } />);
+                    }else{
+                     let videoPlayer = '';
+                    }
                     return(
                         <>
                         <div className="col-md-12">
@@ -88,7 +93,7 @@ const BlogView = () => {
                                                  <img src={itm.subImgUrl} alt={ itm.title } width="100%" height="auto" className="subImageDisp" /> 
                                                 </>
                                             ) 
-                                          }
+                                          } 
                                         }
                                        return (
                                            <p  className="paraSubCont" key={s_k} >{sub_itm.Content}</p>
@@ -97,6 +102,7 @@ const BlogView = () => {
                                    : null 
                                    }
                                   <p className="reference"> Reference : { itm.reference } </p>
+                                  { videoPlayer }
                             </div>
                           </div>
                        </>
