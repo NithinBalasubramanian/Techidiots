@@ -69,7 +69,7 @@ const BlogView = () => {
                                 <p style={ {padding:'10px 0px',margin:'0px'} }>{itm.preheading}</p>
                             </div>
                             <div className="byAuth">
-                                - From {itm.auther} 
+                                - by {itm.auther} 
                             <small>{ moment(itm.createdOn).fromNow() }</small>
                             </div>
                             {/* <img src={itm.filePath} alt="img" width="100%" height="auto" /> */}
@@ -79,11 +79,19 @@ const BlogView = () => {
                                 <p className="paraMainCont">{itm.blog}</p>
                                    { (itm.subPara) ? 
                                        itm.subPara.map((sub_itm,s_k) => {
-                                       return (
-                                           <p  className="paraSubCont" key={s_k} >{sub_itm.Content}</p>
-                                       ) 
+                                       (itm.subImgUrl){
+                                           (s_k === 5){
+                                               return (
+                                                 <img src={itm.subImgUrl} alt={ itm.title } width="100%" height="auto" /> 
+                                                ) 
+                                           } : null 
+                                          } : null
+                                           return (
+                                               <p  className="paraSubCont" key={s_k} >{sub_itm.Content}</p>
+                                           ) 
                                     })
                                    : null }
+                                  <p className="reference"> Reference : { itm.reference } </p>
                             </div>
                           </div>
                        </>
