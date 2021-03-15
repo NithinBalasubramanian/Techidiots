@@ -1,4 +1,4 @@
-import React , { useState } from 'react';
+import React , { useState , useEffect } from 'react';
 import '../style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
@@ -13,6 +13,10 @@ const Navbar = () => {
     const sidebarStatusHandler = () =>{
         setDisplay_status(!display_status);
     }
+    
+     useEffect(()=>{
+        setDisplay_status(false);
+    }, []) 
     
     return(
       <div className="NavbarMain">
