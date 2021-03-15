@@ -88,7 +88,7 @@ const BlogView = () => {
                                                  <img src={itm.subImgUrl} alt={ itm.title } width="100%" height="auto" className="subImageDisp" /> 
                                                 </>
                                             ) 
-                                          } 
+                                          }
                                         }
                                        return (
                                            <p  className="paraSubCont" key={s_k} >{sub_itm.Content}</p>
@@ -97,12 +97,6 @@ const BlogView = () => {
                                    : null 
                                    }
                                   <p className="reference"> Reference : { itm.reference } </p>
-                                  { () => { if(itm.videoLink){
-                                      return (
-                                            <ReactPlayer url={itm.videoLink} />
-                                        ) 
-                                    }
-                                  } }
                             </div>
                           </div>
                        </>
