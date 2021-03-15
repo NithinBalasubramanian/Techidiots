@@ -62,9 +62,9 @@ const BlogView = () => {
                 { datas.map((itm,k) => { 
                     document.title=itm.title;
                     if(itm.VideoLink){
-                     let videoPlayer = return( <ReactPlayer url={itm.videoLink } />);
+                     let videoPlayer = <ReactPlayer url={itm.videoLink } />;
                     }else{
-                     let videoPlayer = '';
+                     let videoPlayer = null;
                     }
                     return(
                         <>
