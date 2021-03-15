@@ -46,8 +46,6 @@ const BlogView = () => {
         FetchdataNot();
         window.scrollTo(0, 0);
     }, [url]) 
-    
-    let videoPlayer = '';
 
   return(
     <>
@@ -63,9 +61,6 @@ const BlogView = () => {
             <div className="blogContent">
                 { datas.map((itm,k) => { 
                     document.title=itm.title;
-                    if(itm.VideoLink){
-                      videoPlayer = <ReactPlayer url={itm.videoLink } />;
-                    }
                     return(
                         <>
                         <div className="col-md-12">
@@ -102,7 +97,7 @@ const BlogView = () => {
                                    : null 
                                    }
                                   <p className="reference"> Reference : { itm.reference } </p>
-                                  { videoPlayer }
+                                  <ReactPlayer url={itm.videoLink } />
                             </div>
                           </div>
                        </>
