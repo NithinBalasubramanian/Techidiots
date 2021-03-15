@@ -79,7 +79,7 @@ const BlogView = () => {
                                 <p className="paraMainCont">{itm.blog}</p>
                                    { (itm.subPara) ? 
                                        itm.subPara.map((sub_itm,s_k) => {
-                                       (itm.subImgUrl) ? 
+                                       (itm.subImgUrl) ? (
                                            (s_k === 5) ?
                                                 (
                                                     <>
@@ -87,7 +87,7 @@ const BlogView = () => {
                                                     </>
                                                 ) 
                                            : null 
-                                          : null
+                                         ) : null
                                            return (
                                                <p  className="paraSubCont" key={s_k} >{sub_itm.Content}</p>
                                            ) 
