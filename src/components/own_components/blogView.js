@@ -1,7 +1,7 @@
 import React , { useState , useEffect } from 'react';
 import { useParams } from 'react-router';
 import axios from '../../apiInstance/instance_API';
-import { Link } from 'react-router-dom';
+import { Link , useLocation , withRouter } from 'react-router-dom';
 import moment from 'moment';
 
 const BlogView = () => {
@@ -43,8 +43,11 @@ const BlogView = () => {
         setFetchStatus(true);
         Fetchdata();
         FetchdataNot();
+        window.scrollTo(0, 0);
     }, [url]) 
-    
+   
+const ScrollToTop = withRouter(_ScrollToTop)
+
   return(
     <>
       <div className={(FetchStatus) ? "preLoader" : "preNone" } >
