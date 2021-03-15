@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import axios from '../../apiInstance/instance_API';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
+import ReactPlayer from 'react-player'
 
 const BlogView = () => {
 
@@ -93,8 +94,15 @@ const BlogView = () => {
                                            <p  className="paraSubCont" key={s_k} >{sub_itm.Content}</p>
                                        ) 
                                     })
-                                   : null }
+                                   : null 
+                                   }
                                   <p className="reference"> Reference : { itm.reference } </p>
+                                  { () => { if(itm.videoUrl){
+                                      return (
+                                            <ReactPlayer url={itm.videoUrl} />
+                                        ) 
+                                    }
+                                  } }
                             </div>
                           </div>
                        </>
