@@ -83,7 +83,7 @@ const BlogView = () => {
                                           if (s_k === 5){
                                             return (
                                                 <>
-                                                 <img src={itm.subImgUrl} alt={ itm.title } width="100%" height="auto" /> 
+                                                 <img src={itm.subImgUrl} alt={ itm.title } width="100%" height="auto" className="subImageDisp" /> 
                                                 </>
                                             ) 
                                           } 
@@ -93,7 +93,8 @@ const BlogView = () => {
                                        ) 
                                     })
                                    : null }
-                                  <p className="reference"> Reference : { itm.reference } </p>
+                                 { (itm.reference) ?
+                                  return (<p className="reference"> Reference : { itm.reference } </p>) : null }
                             </div>
                           </div>
                        </>
