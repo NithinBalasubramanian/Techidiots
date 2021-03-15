@@ -82,7 +82,9 @@ const BlogView = () => {
                                        (itm.subImgUrl) ? 
                                            (s_k === 5) ?
                                                return (
-                                                 <img src={itm.subImgUrl} alt={ itm.title } width="100%" height="auto" /> 
+                                                    <>
+                                                     <img src={itm.subImgUrl} alt={ itm.title } width="100%" height="auto" /> 
+                                                    </>
                                                 ) 
                                            : null 
                                           : null
