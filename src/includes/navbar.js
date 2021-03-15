@@ -14,9 +14,7 @@ const Navbar = () => {
         setDisplay_status(!display_status);
     }
     
-     useEffect(()=>{
-        setDisplay_status(false);
-    }, []) 
+    
     
     return(
       <div className="NavbarMain">
