@@ -46,6 +46,8 @@ const BlogView = () => {
         FetchdataNot();
         window.scrollTo(0, 0);
     }, [url]) 
+    
+    let videoPlayer = '';
 
   return(
     <>
@@ -62,9 +64,7 @@ const BlogView = () => {
                 { datas.map((itm,k) => { 
                     document.title=itm.title;
                     if(itm.VideoLink){
-                     let videoPlayer = <ReactPlayer url={itm.videoLink } />;
-                    }else{
-                     let videoPlayer = null;
+                      videoPlayer = <ReactPlayer url={itm.videoLink } />;
                     }
                     return(
                         <>
