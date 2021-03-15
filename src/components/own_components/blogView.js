@@ -93,8 +93,7 @@ const BlogView = () => {
                                        ) 
                                     })
                                    : null }
-                                 { (itm.reference) ?
-                                  return (<p className="reference"> Reference : { itm.reference } </p>) : null }
+                                  <p className="reference"> Reference : { itm.reference } </p>
                             </div>
                           </div>
                        </>
