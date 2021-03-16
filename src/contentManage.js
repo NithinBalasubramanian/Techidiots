@@ -19,7 +19,7 @@ const ContentManager = () => {
         <BlogView  />
        </Route>
       <Route path="/Category/:category" exact>
-        <CategoryBlogView  />
+        <CategoryBlogView />
        </Route>
       <Route path="/News" >
         <ArticleStore />
