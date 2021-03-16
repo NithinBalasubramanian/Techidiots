@@ -50,8 +50,8 @@ const Navbar = () => {
                     <li><NavLink to="/Category/space" activeClassName="activeMenu" exact>SPACE</NavLink></li>
                     <li><NavLink to="/Category/programming" activeClassName="activeMenu" exact>PROGRAMMING</NavLink></li>
                     <li><NavLink to="/Category/others" activeClassName="activeMenu" exact>OTHERS</NavLink></li>
-//                     <li><NavLink to="/News" activeClassName="activeMenu">NEWS</NavLink></li>
-//                     <li><NavLink to="/Books" activeClassName="activeMenu">BOOKS</NavLink></li>
+                    <li><NavLink to="/News" activeClassName="activeMenu">NEWS</NavLink></li>
+                    <li><NavLink to="/Books" activeClassName="activeMenu">BOOKS</NavLink></li>
                 </ul>
             </div>
         </div>
