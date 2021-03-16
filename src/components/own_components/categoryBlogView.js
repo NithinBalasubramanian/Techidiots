@@ -17,7 +17,7 @@ const CategoryBlogView = () => {
     }, [])
 
     const fetchAll = () =>{
-        axios.get('/blogFetch/+category')
+        axios.get('/blogFetch/'+category)
         .then((res) => {
             setListdata(res.data);
             setFetchStatus(false);
