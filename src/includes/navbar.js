@@ -31,8 +31,12 @@ const Navbar = () => {
                 <div className="NavList">
                     <ul className="NavListMenu">
                         <li><NavLink to="/" activeClassName="activeMenu" exact>HOME</NavLink></li>
-                        <li><NavLink to="/News" activeClassName="activeMenu">NEWS</NavLink></li>
-                        <li><NavLink to="/Books" activeClassName="activeMenu">BOOKS</NavLink></li>
+                        <li><NavLink to="/" activeClassName="activeMenu" exact>HOME</NavLink></li>
+                        <li><NavLink to="/" activeClassName="activeMenu" exact>TECH NEWS</NavLink></li>
+                        <li><NavLink to="/" activeClassName="activeMenu" exact>TECH INFO</NavLink></li>
+                        <li><NavLink to="/" activeClassName="activeMenu" exact>AUTOMOBILES</NavLink></li>
+                        <li><NavLink to="/" activeClassName="activeMenu" exact>SPACE</NavLink></li>
+                        <li><NavLink to="/" activeClassName="activeMenu" exact>OTHERS</NavLink></li>
                     </ul>
                 </div>
             </div>
@@ -41,8 +45,14 @@ const Navbar = () => {
             <div className="NavListMob">
                 <ul className="NavListMenuMob">
                     <li><NavLink to="/" activeClassName="activeMenu" exact>HOME</NavLink></li>
-                    <li><NavLink to="/News" activeClassName="activeMenu">NEWS</NavLink></li>
-                    <li><NavLink to="/Books" activeClassName="activeMenu">BOOKS</NavLink></li>
+                    <li><NavLink to="/" activeClassName="activeMenu" exact>TECH NEWS</NavLink></li>
+                    <li><NavLink to="/" activeClassName="activeMenu" exact>TECH INFO</NavLink></li>
+                    <li><NavLink to="/" activeClassName="activeMenu" exact>AUTOMOBILES</NavLink></li>
+                    <li><NavLink to="/" activeClassName="activeMenu" exact>SPACE</NavLink></li>
+                    <li><NavLink to="/" activeClassName="activeMenu" exact>PROGRAMMING</NavLink></li>
+                    <li><NavLink to="/" activeClassName="activeMenu" exact>OTHERS</NavLink></li>
+//                     <li><NavLink to="/News" activeClassName="activeMenu">NEWS</NavLink></li>
+//                     <li><NavLink to="/Books" activeClassName="activeMenu">BOOKS</NavLink></li>
                 </ul>
             </div>
         </div>
