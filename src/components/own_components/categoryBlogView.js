@@ -14,7 +14,7 @@ const CategoryBlogView = () => {
 
     useEffect(() => {
         fetchAll();
-    }, [])
+    }, [category])
 
     const fetchAll = () =>{
         axios.get('/blogFetch/'+category)
