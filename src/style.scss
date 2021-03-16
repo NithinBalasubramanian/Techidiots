@@ -139,6 +139,10 @@ $bounce_height: 30px;
           .activeMenu{
             color : $activeColor;
           }
+          
+          a:hover{
+            color : $activeColor;
+          }
         }
       }
     }
