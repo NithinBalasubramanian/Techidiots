@@ -34,7 +34,7 @@ const Navbar = () => {
                         <li><NavLink to="/Category/techNews" exact>TECH NEWS</NavLink></li>
                         <li><NavLink to="/Category/techInfo" exact>TECH INFO</NavLink></li>
                         <li><NavLink to="/Category/automobiles" activeClassName="activeMenu" exact>AUTOMOBILES</NavLink></li>
-                        <li><NavLink to="/Category/space" activeClassName="activeMenu" exact>SPACE</NavLink></li>
+                        <li><NavLink to="/Category/finance" activeClassName="activeMenu" exact>FINANCE</NavLink></li>
                         <li><NavLink to="/Category/others" activeClassName="activeMenu" exact>OTHERS</NavLink></li>
                     </ul>
                 </div>
@@ -46,6 +46,7 @@ const Navbar = () => {
                     <li><NavLink to="/" activeClassName="activeMenu" exact>HOME</NavLink></li>
                     <li><NavLink to="/Category/techNews" activeClassName="activeMenu" exact>TECH NEWS</NavLink></li>
                     <li><NavLink to="/Category/techInfo" activeClassName="activeMenu" exact>TECH INFO</NavLink></li>
+                    <li><NavLink to="/Category/finance" activeClassName="activeMenu" exact>FINANCE</NavLink></li>
                     <li><NavLink to="/Category/automobiles" activeClassName="activeMenu" exact>AUTOMOBILES</NavLink></li>
                     <li><NavLink to="/Category/space" activeClassName="activeMenu" exact>SPACE</NavLink></li>
                     <li><NavLink to="/Category/programming" activeClassName="activeMenu" exact>PROGRAMMING</NavLink></li>
