@@ -13,6 +13,7 @@ const CategoryBlogView = () => {
   let [ FetchStatus , setFetchStatus ] = useState(true);
 
     useEffect(() => {
+       setFetchStatus(true);
         fetchAll();
     }, [category])
 
