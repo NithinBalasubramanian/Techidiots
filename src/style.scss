@@ -89,7 +89,6 @@ $bounce_height: 30px;
   background-color:$primaryColor;
   position:fixed;
   z-index:1001;
-  border-bottom:2px solid #fff;
   
   .navHead{
     width:100%;
@@ -316,6 +315,13 @@ p{
     margin:5px 0px;
     text-indent:0px;
   }
+  
+  .reference{
+    font-size: 14px;
+    font-weight: 400;
+    color:#afa7b5;
+    padding: 15px 0px 20px 0px;
+  }
 
 .byAuth{
   font-size: 14px;
@@ -330,12 +336,6 @@ p{
   
   .subImageDisp{
     margin:15px 0px;
-  }
-  .reference{
-    font-size: 14px;
-    font-weight: 400;
-    color:#afa7b5;
-    padding: 15px 0px 20px 0px;
   }
 }
 }
@@ -439,6 +439,7 @@ p{
     background-color:#40e693;
     position:fixed;
     display:none;
+    border-top:2px solid #fff;
 
     .NavListMob{
       width: 90%;
