@@ -265,7 +265,31 @@ footer{
   }
 }
 
+.midAbout{
+  margin:15px 0px;
+  height:350px;
+  background-color:$primaryColor;
 
+  p{
+    font-size:12px;
+    color:$logocolor;
+    padding:50px 50px 0px 50px;
+    margin:0px;
+  }
+
+  h1{
+    padding:50px;
+    font-size:35px;
+    font-weight:700;
+    letter-spacing:1px;
+    line-height:40px;
+    color:$logoColor;
+
+    span{
+       color:$activeColor;
+    }
+  }
+}
 //page view
 
 .pageContainer{

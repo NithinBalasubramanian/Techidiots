@@ -97,12 +97,7 @@ const BlogView = () => {
                                    : null 
                                    }
                                   <p className="reference"> Reference : { itm.reference } </p>
-                                  { () => { if(itm.videoUrl){
-                                      return (
-                                            <ReactPlayer url={itm.videoUrl} />
-                                        ) 
-                                    }
-                                  } }
+                                  <ReactPlayer url={itm.videoLink } width="100%" height="400px"/>
                             </div>
                           </div>
                        </>
