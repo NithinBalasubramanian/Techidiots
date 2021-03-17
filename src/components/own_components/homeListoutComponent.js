@@ -44,7 +44,7 @@ const HomeListoutComponent = () => {
                             <Link to={`/Blog/${itm.url}`} exact >
                                 <img src={itm.imgUrl} alt={ itm.title } width="100%" height="300px" /> 
                                 <div className="byAuth">
-                                    - From {itm.auther} 
+                                    - by {itm.auther} 
                                 </div>
                                 <h4>{ itm.title }</h4>
                                 <p>{ itm.preheading } </p>
@@ -59,7 +59,7 @@ const HomeListoutComponent = () => {
                             <Link to={`/Blog/${itm.url}`} exact >
                                 <img src={itm.imgUrl} alt={ itm.title } width="100%" height="250px" /> 
                                 <div className="byAuth">
-                                - From {itm.auther} 
+                                - by {itm.auther} 
                                 </div>
                                 <h4>{ itm.title }</h4>
                                 <p>{ itm.preheading } </p>
@@ -69,6 +69,10 @@ const HomeListoutComponent = () => {
                     )
                 })
             }
+            <div className="col-md-12 midAbout">
+                <p>About Tech Idiots</p>
+                <h1>TechIdiots.com is developed to give YOU a platform to VIEW and GAIN more information on latest Tech Based NEWS and information all in one . This REFERS iformation from many TRUSTABLE resourses and PRESENT before YOU .. . </h1>
+            </div>
        </div>
     </div>
     </>
