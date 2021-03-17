@@ -42,7 +42,7 @@ const Navbar = () => {
         </div>
         <div className={ (display_status) ? 'mobileNav mobOn' : 'mobileNav'}>
             <div className="NavListMob">
-                <ul className="NavListMenuMob">
+                <ul className="NavListMenuMob"  onClick={ sidebarStatusHandler } >
                     <li><NavLink to="/" activeClassName="activeMenu" exact>HOME</NavLink></li>
                     <li><NavLink to="/Category/techNews" activeClassName="activeMenu" exact>TECH NEWS</NavLink></li>
                     <li><NavLink to="/Category/techInfo" activeClassName="activeMenu" exact>TECH INFO</NavLink></li>
