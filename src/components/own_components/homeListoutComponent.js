@@ -71,7 +71,7 @@ const HomeListoutComponent = () => {
             }
             <div className="col-md-12 midAbout">
                 <p>About Tech Idiots</p>
-                <h1>TechIdiots.com is developed to give YOU a platform to VIEW and GAIN more information on latest Tech Based NEWS and information all in one . This REFERS iformation from many TRUSTABLE resourses and PRESENT before YOU .. . </h1>
+                <h1><span>TechIdiots.com </span>is developed to give YOU a platform to <span>VIEW</span> and <span>GAIN</span> more information on latest <span>TECH</span> Based NEWS and information all in one . This <span>REFERS</span> iformation from many<span>TRUSTABLE</span>  resourses and <span>PRESENT</span> before YOU .... </h1>
             </div>
        </div>
     </div>
