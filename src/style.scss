@@ -187,7 +187,6 @@ footer{
       height:auto;
       padding:15px;
       border-radius:10px;
-      border-bottom:1px solid $primaryColor;
       
       .category{
         padding:6px 10px;
@@ -206,7 +205,48 @@ footer{
       }
       
       h4{
-          padding:10px;
+          padding:10px 0px;
+          height:auto;
+          color:$HeadingColor;
+        }
+
+      p{
+        color:$secondaryFont;
+        padding:15px 10px;
+      }
+
+      .byAuth{
+        padding:10px;
+        color:$activeColor;
+        font-size:14px;
+      }
+    }
+    
+    .card_top_sub_home{
+      width:100%;
+      height:auto;
+      padding:15px;
+      border-radius:10px;
+      border-bottom:2px solid $primaryColor;
+      
+      .category{
+        padding:4px 8px;
+        text-align:center;
+        background-color:$primaryColor;
+        color:#fff;
+        margin:0px;
+        font-size:10px;
+        font-weight:700;
+        letter-spacing:2px;
+      }
+      
+      a{
+        text-decoration:none;
+        color:$HeadingColor;
+      }
+      
+      h4{
+          padding:10px 0px;
           height:auto;
           color:$HeadingColor;
         }
