@@ -2,6 +2,7 @@ import React , { useState , useEffect } from 'react';
 import '../../App.scss';
 import axios from '../../apiInstance/instance_API';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 const HomeListoutComponent = () => {
   
@@ -14,7 +15,12 @@ const HomeListoutComponent = () => {
     useEffect(() => {
         document.title ='Tech Idiots - The Collections of Tech , Finance , Automobile ,space , programming , defence ect';
         fetchAbove();
-        fetchAll();
+      
+      const timer = setTimeout(() => {);
+         fetchAll();
+        }, 3000);
+      return () => clearTimeout(timer)
+      
     }, [])
   
     const fetchAbove = () => {
@@ -32,7 +38,6 @@ const HomeListoutComponent = () => {
         axios.get('/homeFetch')
         .then((res) => {
             setListdata(res.data);
-            setFetchStatus(false);
         })
         .catch((error) => {
             console.log(error);
@@ -81,6 +86,7 @@ const HomeListoutComponent = () => {
                                 <h4>{ itm.title }</h4>
                                 <div className="byAuth">
                                     - by {itm.auther} 
+                                    <small>{ moment(itm.createdOn).fromNow() }</small>
                                 </div>
                                 <img src={itm.imgUrl} alt={ itm.title } width="100%" height="180px" /> 
                             </Link>
