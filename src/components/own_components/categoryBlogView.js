@@ -45,7 +45,7 @@ const CategoryBlogView = () => {
                     return(
                     <div className="col-md-6 card_col" >
                         <div className="card_home">
-                            <Link to={`/Blog/${itm.url}`} exact >
+                            <Link to={`/Blog/${itm.category}/${itm.url}`} exact >
                                 <img src={itm.imgUrl} alt={ itm.title } width="100%" height="300px" /> 
                                 <div className="byAuth">
                                     - From {itm.auther} 
@@ -60,7 +60,7 @@ const CategoryBlogView = () => {
                 return(
                     <div className="col-md-4 card_col">
                         <div className="card_home">
-                            <Link to={`/Blog/${itm.url}`} exact >
+                            <Link to={`/Blog/${itm.category}/${itm.url}`} exact >
                                 <img src={itm.imgUrl} alt={ itm.title } width="100%" height="250px" /> 
                                 <div className="byAuth">
                                 - From {itm.auther} 
