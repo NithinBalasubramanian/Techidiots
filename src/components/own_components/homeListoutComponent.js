@@ -56,7 +56,7 @@ const HomeListoutComponent = () => {
                 if(k === 0 || k === 1  ){
                     return(
                          <div className="card_top_home">
-                            <Link to={`/Blog/${itm.url}`} exact >
+                            <Link to={`/Blog/${itm.category}/${itm.url}`} exact >
                                 <div className="category">{ itm.category }</div>
                                 <h4>{ itm.title }</h4>
                                 <div className="byAuth">
@@ -76,7 +76,7 @@ const HomeListoutComponent = () => {
                 if(k > 1 && k < 5 ){
                     return(
                          <div className="card_top_sub_home">
-                            <Link to={`/Blog/${itm.url}`} exact >
+                            <Link to={`/Blog/${itm.category}/${itm.url}`} exact >
                                 <p className="category">{ itm.category }</p>
                                 <h4>{ itm.title }</h4>
                                 <div className="byAuth">
@@ -101,7 +101,7 @@ const HomeListoutComponent = () => {
                     return(
                     <div className="col-md-6 card_col" >
                         <div className="card_home">
-                            <Link to={`/Blog/${itm.url}`} exact >
+                            <Link to={`/Blog/${itm.category}/${itm.url}`} exact >
                                 <img src={itm.imgUrl} alt={ itm.title } width="100%" height="300px" /> 
                                 <div className="byAuth">
                                     - by {itm.auther} 
@@ -116,7 +116,7 @@ const HomeListoutComponent = () => {
                 return(
                     <div className="col-md-4 card_col">
                         <div className="card_home">
-                            <Link to={`/Blog/${itm.url}`} exact >
+                            <Link to={`/Blog/${itm.category}/${itm.url}`} exact >
                                 <img src={itm.imgUrl} alt={ itm.title } width="100%" height="250px" /> 
                                 <div className="byAuth">
                                 - by {itm.auther} 
