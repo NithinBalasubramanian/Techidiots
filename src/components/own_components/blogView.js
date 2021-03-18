@@ -101,8 +101,9 @@ const BlogView = () => {
                                     })
                                    : null 
                                    }
+
+                                  <ReactPlayer url={itm.videoLink } width="100%" height={ (itm.videoLink) ? "400px" : "0px" } />
                                   <p className="reference"> Reference : { itm.reference } </p>
-                                  <ReactPlayer url={itm.videoLink } width="100%" height="400px"/>
                             </div>
                           </div>
                        </>
