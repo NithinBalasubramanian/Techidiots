@@ -89,7 +89,7 @@ const HomeListoutComponent = () => {
                })
              }
          </div>
-      <div>
+      </div>
       <div className="row">
                   { Listdata.map((itm,k) => {
                 if(k === 0 || k === 1 || k === 8 || k === 9 ){
@@ -129,7 +129,6 @@ const HomeListoutComponent = () => {
                 <h1><span>TechIdiots.com </span>is developed to give YOU a platform to <span>VIEW</span> and <span>GAIN</span> more information on latest <span>TECH</span> Based NEWS and information all in one . This <span>REFERS</span> iformation from many<span>TRUSTABLE</span>  resourses and <span>PRESENT</span> before YOU .... </h1>
             </div>
        </div>
-      </div>
     </div>
     </>
   );
