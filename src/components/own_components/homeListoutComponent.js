@@ -12,6 +12,7 @@ const HomeListoutComponent = () => {
   let [ FetchStatus , setFetchStatus ] = useState(true);
 
     useEffect(() => {
+        document.title ='Tech Idiots - The Collections of Tech , Finance , Automobile ,space , programming , defence ect';
         fetchAbove();
         fetchAll();
     }, [])
