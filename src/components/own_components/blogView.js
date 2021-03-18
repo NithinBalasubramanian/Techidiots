@@ -63,6 +63,11 @@ const BlogView = () => {
                     document.title=itm.title;
                     return(
                         <>
+                        <div className="col-md-6">
+                            <div className="category">
+                                { itm.category }
+                            </div>
+                        </div>
                         <div className="col-md-12">
                             <h1>{itm.title}</h1>
                         </div>
