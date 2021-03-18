@@ -6,12 +6,26 @@ import { Link } from 'react-router-dom';
 const HomeListoutComponent = () => {
   
   let [ Listdata , setListdata ] = useState([]);
+  
+  let [ ListTopdata , setListTopdata ] = useState([]);
 
   let [ FetchStatus , setFetchStatus ] = useState(true);
 
     useEffect(() => {
+        fetchAbove();
         fetchAll();
     }, [])
+  
+    const fetchAbove = () => {
+        axios.get('/homeTopFetch')
+      .then((res) => {
+            setListTopdata(res.data);
+            setFetchStatus(false);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+    }
 
     const fetchAll = () =>{
         axios.get('/homeFetch')
@@ -36,8 +50,49 @@ const HomeListoutComponent = () => {
     </div>
     <div className="homeListContainer">
       <div className="row">
+         <div className="col-md-8">
+         { ListTopdata.map((itm,k) => {
+                if(k === 0 || k === 1  ){
+                    return(
+                         <div className="card_top_home">
+                            <Link to={`/Blog/${itm.url}`} exact >
+                                <p className="category">{ itm.category }</p>
+                                <h4>{ itm.title }</h4>
+                                <div className="byAuth">
+                                    - by {itm.auther} 
+                                </div>
+                                <img src={itm.imgUrl} alt={ itm.title } width="100%" height="350px" /> 
+                                <p>{ itm.preheading } </p>
+                            </Link>
+                        </div>    
+                  )
+                }
+              })
+             }
+          </div>
+        <div className="col-md-4">
+           { ListTopdata.map((itm,k) => {
+                if(k > 1 && k < 6 ){
+                    return(
+                         <div className="card_top_sub_home">
+                            <Link to={`/Blog/${itm.url}`} exact >
+                                <p className="category">{ itm.category }</p>
+                                <h4>{ itm.title }</h4>
+                                <div className="byAuth">
+                                    - by {itm.auther} 
+                                </div>
+                                <img src={itm.imgUrl} alt={ itm.title } width="100%" height="180px" /> 
+                            </Link>
+                        </div>    
+                  )
+                }
+              })
+             }
+         </div>
+      <div>
+      <div className="row">
                   { Listdata.map((itm,k) => {
-                if(k === 0 || k === 1 || k === 8 || k === 9 || k === 19 || k=== 20){
+                if(k === 0 || k === 1 || k === 8 || k === 9 ){
                     return(
                     <div className="col-md-6 card_col" >
                         <div className="card_home">
