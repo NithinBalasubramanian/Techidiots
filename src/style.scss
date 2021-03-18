@@ -231,7 +231,6 @@ footer{
       width:100%;
       height:auto;
       padding:15px;
-      border-bottom:2px solid $primaryColor;
       
       .category{
         padding:4px 8px;
@@ -243,6 +242,7 @@ footer{
         font-weight:700;
         letter-spacing:2px;
         text-transform:uppercase;
+        width:160px;
       }
       
       a{
