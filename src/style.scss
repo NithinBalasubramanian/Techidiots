@@ -362,7 +362,7 @@ footer{
 
 .midAbout{
   margin:15px 0px;
-  height:350px;
+  height:auto;
   background-color:$primaryColor;
 
   p{
@@ -373,11 +373,11 @@ footer{
   }
 
   h1{
-    padding:50px;
+    padding:50px 50px 20px 50px;
     font-size:35px;
     font-weight:700;
-    letter-spacing:1px;
-    line-height:40px;
+    letter-spacing:2px;
+    line-height:42px;
     color:$logoColor;
 
     span{
@@ -589,8 +589,8 @@ p{
   }
   
   .midAbout{
-  margin:15px 0px;
-  height:350px;
+  margin:10px 0px;
+  height:auto;
   background-color:$primaryColor;
 
   p{
@@ -601,11 +601,11 @@ p{
   }
 
   h1{
-    padding:50px;
-    font-size:35px;
+    padding:20px;
+    font-size:25px;
     font-weight:700;
-    letter-spacing:1px;
-    line-height:40px;
+    letter-spacing:2px;
+    line-height:30px;
     color:$logoColor;
 
     span{
