@@ -40,7 +40,7 @@ const HomeListoutComponent = () => {
     
   return(
     <>
-       <div className={(FetchStatus) ? "preLoader" : "preNone" } >
+      <div className={(FetchStatus) ? "preLoader" : "preNone" } >
         <div className="wrap">
             <div className="loading">
                 <div className="bounceball"></div>
@@ -84,9 +84,9 @@ const HomeListoutComponent = () => {
                                 <img src={itm.imgUrl} alt={ itm.title } width="100%" height="180px" /> 
                             </Link>
                         </div>    
-                  )
-                }
-              })
+                    )
+                 }
+               })
              }
          </div>
       <div>
@@ -129,6 +129,7 @@ const HomeListoutComponent = () => {
                 <h1><span>TechIdiots.com </span>is developed to give YOU a platform to <span>VIEW</span> and <span>GAIN</span> more information on latest <span>TECH</span> Based NEWS and information all in one . This <span>REFERS</span> iformation from many<span>TRUSTABLE</span>  resourses and <span>PRESENT</span> before YOU .... </h1>
             </div>
        </div>
+      </div>
     </div>
     </>
   );
