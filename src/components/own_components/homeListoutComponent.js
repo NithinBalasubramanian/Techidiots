@@ -16,10 +16,10 @@ const HomeListoutComponent = () => {
         document.title ='Tech Idiots - The Collections of Tech , Finance , Automobile ,space , programming , defence ect';
         fetchAbove();
       
-      const timer = setTimeout(() => {);
+      const timer = setTimeout(() => {
          fetchAll();
         }, 3000);
-      return () => clearTimeout(timer)
+      return () => clearTimeout(timer);
       
     }, [])
   
@@ -124,6 +124,9 @@ const HomeListoutComponent = () => {
                         <div className="card_home">
                             <Link to={`/Blog/${itm.category}/${itm.url}`} exact >
                                 <img src={itm.imgUrl} alt={ itm.title } width="100%" height="250px" /> 
+                                <div className="category">
+                                    { itm.category }
+                                </div>
                                 <div className="byAuth">
                                 - by {itm.auther} 
                                 </div>
