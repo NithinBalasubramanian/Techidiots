@@ -97,7 +97,7 @@ const HomeListoutComponent = () => {
       </div>
       <div className="row">
                   { Listdata.map((itm,k) => {
-                if(k === 0 || k === 1 || k === 8 || k === 9 ){
+                if(k === 0 || k === 1 || k === 5 || k === 6 ){
                     return(
                     <div className="col-md-6 card_col" >
                         <div className="card_home">
