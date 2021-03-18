@@ -181,6 +181,47 @@ footer{
     width:90%;
     margin:0px auto;
     padding:80px 0px 20px 0px;
+    
+    .card_top_home{
+      width:100%;
+      height:auto;
+      padding:15px;
+      border-radius:10px;
+      border-bottom:1px solid $primaryColor;
+      
+      .category{
+        padding:6px 10px;
+        text-align:center;
+        background-color:$primaryColor;
+        color:#fff;
+        margin:0px;
+        font-size:14px;
+        font-weight:700;
+        letter-spacing:2px;
+      }
+      
+      a{
+        text-decoration:none;
+        color:$HeadingColor;
+      }
+      
+      h4{
+          padding:10px;
+          height:auto;
+          color:$HeadingColor;
+        }
+
+      p{
+        color:$secondaryFont;
+        padding:15px 10px;
+      }
+
+      .byAuth{
+        padding:10px;
+        color:$activeColor;
+        font-size:14px;
+      }
+    }
 
     .card_col{
       height:auto;
