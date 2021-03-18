@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player'
 
 const BlogView = () => {
 
-    let {url} = useParams();
+    let { category , url } = useParams();
 
     const [ datas , setDatas ] = useState([]);
 
@@ -31,7 +31,7 @@ const BlogView = () => {
     }
 
     const FetchdataNot = () => {
-        axios.get('/recent/'+url)
+        axios.get('/recentCategory/'+category+'/'+url)
         .then( res => {
             setRecent(res.data);
         })
@@ -113,7 +113,7 @@ const BlogView = () => {
                         {recent.map((itm,k) => {
                             return (
                                 <div className="card_recent ">
-                                    <Link to={ `/Blog/${itm.url}` }  >
+                                    <Link to={ `/Blog/${itm.category}/${itm.url}` }  >
                                         <img src={itm.imgUrl} width="100%" height="150px" alt=""></img>
                                         <h5>{itm.title}</h5>
                                     </Link>
