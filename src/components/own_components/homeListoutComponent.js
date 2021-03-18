@@ -56,7 +56,7 @@ const HomeListoutComponent = () => {
                     return(
                          <div className="card_top_home">
                             <Link to={`/Blog/${itm.url}`} exact >
-                                <p className="category">{ itm.category }</p>
+                                <div className="category">{ itm.category }</div>
                                 <h4>{ itm.title }</h4>
                                 <div className="byAuth">
                                     - by {itm.auther} 
