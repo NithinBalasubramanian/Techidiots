@@ -72,7 +72,7 @@ const HomeListoutComponent = () => {
           </div>
         <div className="col-md-4">
            { ListTopdata.map((itm,k) => {
-                if(k > 1 && k < 6 ){
+                if(k > 1 && k < 5 ){
                     return(
                          <div className="card_top_sub_home">
                             <Link to={`/Blog/${itm.url}`} exact >
