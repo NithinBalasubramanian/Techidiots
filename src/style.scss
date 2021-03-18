@@ -233,12 +233,12 @@ footer{
       padding:15px;
       
       .category{
-        padding:4px 8px;
+        padding:6px 10px;
         text-align:center;
         background-color:$primaryColor;
         color:#fff;
         margin:0px;
-        font-size:10px;
+        font-size:14px;
         font-weight:700;
         letter-spacing:2px;
         text-transform:uppercase;
@@ -398,6 +398,19 @@ footer{
   padding:0px 0px;    
   display: flex;
   flex-wrap: wrap;
+  
+  .category{
+    padding:6px 10px;
+    text-align:center;
+    background-color:$primaryColor;
+    color:#fff;
+    margin:0px;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    width:200px;
+  }
 
 h1{
   padding:10px 0px 20px 0px;
