@@ -65,7 +65,8 @@ const HomeListoutComponent = () => {
                                 <div className="category">{ itm.category }</div>
                                 <h4>{ itm.title }</h4>
                                 <div className="byAuth">
-                                    - by {itm.auther} 
+                                    - by {itm.auther}
+                                    <small>{ moment(itm.createdOn).fromNow() }</small>
                                 </div>
                                 <img src={itm.imgUrl} alt={ itm.title } width="100%" height="350px" /> 
                                 <p>{ itm.preheading } </p>
