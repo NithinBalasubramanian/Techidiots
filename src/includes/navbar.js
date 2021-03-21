@@ -1,4 +1,5 @@
 import React , { useState , useEffect } from 'react';
+import logo from '../assets/logo/techidiots.png';
 import '../style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink , Link } from 'react-router-dom';
@@ -21,7 +22,7 @@ const Navbar = () => {
         <div className="NavContainer row">
             <div className="col-md-4 navHead">
                 <div className="navHeadLogo">
-                    <h2>Tech Idiots</h2> 
+                    <img src={logo} alt="Tech Idiots" className="logo_img" />
                 </div>
                 <div className="navHeadMenu">
                     <BiMenuAltLeft onClick={ sidebarStatusHandler }  size="40px" color="#fff" style={{margin:"10px"}}/>

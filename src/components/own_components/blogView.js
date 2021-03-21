@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player'
 
 const BlogView = () => {
 
-    let {url} = useParams();
+    let { category , url } = useParams();
 
     const [ datas , setDatas ] = useState([]);
 
@@ -31,7 +31,7 @@ const BlogView = () => {
     }
 
     const FetchdataNot = () => {
-        axios.get('/recent/'+url)
+        axios.get('/recentCategory/'+category+'/'+url)
         .then( res => {
             setRecent(res.data);
         })
@@ -63,6 +63,11 @@ const BlogView = () => {
                     document.title=itm.title;
                     return(
                         <>
+                        <div className="col-md-6">
+                            <div className="category">
+                                { itm.category }
+                            </div>
+                        </div>
                         <div className="col-md-12">
                             <h1>{itm.title}</h1>
                         </div>
@@ -96,8 +101,9 @@ const BlogView = () => {
                                     })
                                    : null 
                                    }
+
+                                  <ReactPlayer url={itm.videoLink } width="100%" height={ (itm.videoLink) ? "400px" : "0px" } />
                                   <p className="reference"> Reference : { itm.reference } </p>
-                                  <ReactPlayer url={itm.videoLink } width="100%" height="400px"/>
                             </div>
                           </div>
                        </>
@@ -108,7 +114,7 @@ const BlogView = () => {
                         {recent.map((itm,k) => {
                             return (
                                 <div className="card_recent ">
-                                    <Link to={ `/Blog/${itm.url}` }  >
+                                    <Link to={ `/Blog/${itm.category}/${itm.url}` }  >
                                         <img src={itm.imgUrl} width="100%" height="150px" alt=""></img>
                                         <h5>{itm.title}</h5>
                                     </Link>

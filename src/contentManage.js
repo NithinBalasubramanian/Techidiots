@@ -15,7 +15,7 @@ const ContentManager = () => {
       <Route path="/" exact>
         <HomeListoutComponent />
       </Route>
-       <Route path="/Blog/:url" exact>
+       <Route path="/Blog/:category/:url" exact>
         <BlogView  />
        </Route>
       <Route path="/Category/:category" exact>
