@@ -13,6 +13,7 @@ const BookStore = () => {
   let [ FetchStatus , setFetchStatus ] = useState(true);
 
   useEffect(() => {
+     window.scrollTo(0, 0);
     fetchAll();
   }, []);
 
