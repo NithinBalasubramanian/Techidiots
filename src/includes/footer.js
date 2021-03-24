@@ -10,7 +10,7 @@ const Footer = () => {
         <footer>
           <div className="footer_container">
             <p className="copyCont">2020 - { Year } - &copy; || All Right Reserved  <br/>
-            || TECH IDIOTE || Powered by Pingifinit Software Technology</p>
+            info@techidiots.in || TECH IDIOTE || Powered by Pingifinit Software Technology</p>
           </div>
         </footer>
     )
