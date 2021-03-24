@@ -14,6 +14,7 @@ const HomeListoutComponent = () => {
 
     useEffect(() => {
         document.title ='Tech Idiots - The Collections of Tech , Finance , Automobile ,space , programming , defence ect';
+        window.scrollTo(0, 0);
         fetchAbove();
       
       const timer = setTimeout(() => {
