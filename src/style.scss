@@ -565,10 +565,14 @@ p{
 
 
 //Media 1020px
-@media screen and (max-width: 1028){
+@media screen and (max-width: 1100){
     .NavbarMain .NavContainer{
       width:100%;
-  }
+    }
+    .ext{
+     display:none;
+    }
+ 
 }
 //media 980px
 
