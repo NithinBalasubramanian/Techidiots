@@ -109,10 +109,14 @@ const HomeListoutComponent = () => {
                     return(
                     <div className="col-md-6 card_col" >
                         <div className="card_home">
+                                <div className="category">
+                                    { itm.category }
+                                </div>
                             <Link to={`/Blog/${itm.category}/${itm.url}`} exact >
                                 <img src={itm.imgUrl} alt={ itm.title } width="100%" height="300px" /> 
                                 <div className="byAuth">
                                     - by {itm.auther} 
+                                    <small>{ moment(itm.createdOn).fromNow() }</small>
                                 </div>
                                 <h4>{ itm.title }</h4>
                                 <p>{ itm.preheading } </p>
@@ -125,12 +129,13 @@ const HomeListoutComponent = () => {
                     <div className="col-md-4 card_col">
                         <div className="card_home">
                             <Link to={`/Blog/${itm.category}/${itm.url}`} exact >
-                                <img src={itm.imgUrl} alt={ itm.title } width="100%" height="250px" /> 
                                 <div className="category">
                                     { itm.category }
                                 </div>
+                                <img src={itm.imgUrl} alt={ itm.title } width="100%" height="250px" /> 
                                 <div className="byAuth">
                                 - by {itm.auther} 
+                                    <small>{ moment(itm.createdOn).fromNow() }</small>
                                 </div>
                                 <h4>{ itm.title }</h4>
                                 <p>{ itm.preheading } </p>
