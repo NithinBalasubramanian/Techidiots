@@ -69,7 +69,7 @@ const HomeListoutComponent = () => {
                                     - by {itm.auther}
                                     <small>{ moment(itm.createdOn).fromNow() }</small>
                                 </div>
-                                <img src={itm.imgUrl} alt={ itm.title } width="100%" height="350px" /> 
+                                <img src={itm.imgUrl} alt={ itm.title } width="100%"  /> 
                                 <p>{ itm.preheading } </p>
                             </Link>
                         </div>    
@@ -90,7 +90,7 @@ const HomeListoutComponent = () => {
                                     - by {itm.auther} 
                                     <small>{ moment(itm.createdOn).fromNow() }</small>
                                 </div>
-                                <img src={itm.imgUrl} alt={ itm.title } width="100%" height="180px" /> 
+                                <img src={itm.imgUrl} alt={ itm.title } width="100%"  /> 
                             </Link>
                         </div>    
                     )
