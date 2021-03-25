@@ -308,6 +308,14 @@ footer{
         background-color:$cardColor;
         padding:0px;
         box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+       
+       .category{
+         padding:5px 15px;
+         background-color:$primaryColor;
+         position:fixed;
+         z-index:5;
+         color:#fff;
+       }
 
         a{
           text-decoration:none;
@@ -329,6 +337,10 @@ footer{
           padding:10px;
           color:$activeColor;
           font-size:14px;
+         
+         small{
+          float:right;
+         }
         }
       }
 
