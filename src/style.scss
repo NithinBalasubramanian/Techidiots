@@ -163,6 +163,7 @@ footer{
   height:auto;
   background-color:$primaryColor;
   color:$menuColor;
+  padding :10px 0px;
   
   .footer_container{
     width:90%;
@@ -322,7 +323,7 @@ footer{
          padding: 5px 20px;
          background-color: #40e693;
          position: absolute;
-         z-index: 1005;
+         z-index: 1000;
          margin: 8px 0px;
          letter-spacing: 2px;
          color: #fff;
