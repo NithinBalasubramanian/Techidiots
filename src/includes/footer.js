@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style.scss';
-import { AiFillGithub , AiFillLinkedin , AiFillTwitterCircle , AiFillFacebook , AiFillInstagram } from 'react-icons/Ai';
+import { AiFillGithub , AiFillLinkedin , AiFillTwitterCircle , AiFillFacebook , AiFillInstagram } from 'react-icons/ai';
 
 const Footer = () => {
     let date=new Date();
