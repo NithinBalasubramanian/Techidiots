@@ -168,6 +168,21 @@ footer{
   .footer_container{
     width:90%;
     margin:10px auto;
+   
+     .social{
+      width:100%;
+      padding:10px;
+      display:flex;
+      text-align:center;
+      
+      a{
+       text-decoration:none;
+       text-align:center;
+      }
+      a:hover{
+       text-decoration:none;
+      }
+    }
   
     .copyCont{
       font-size:12px;
