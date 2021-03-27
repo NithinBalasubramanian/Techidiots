@@ -168,6 +168,25 @@ footer{
   .footer_container{
     width:90%;
     margin:10px auto;
+    text-align:center;
+   
+     .social{
+      width:50%;
+      padding:10px;
+      display:flex;
+      text-align:center;
+      margin:0px auto;
+      
+      a{
+       text-decoration:none;
+       text-align:center;
+       margin:0px auto;
+      }
+      a:hover{
+       text-decoration:none;
+       margin:0px auto;
+      }
+    }
   
     .copyCont{
       font-size:12px;
@@ -681,6 +700,28 @@ p{
     }
   }
 }
+ footer .footer_container{
+       .social{
+           width:70%;
+           padding:10px;
+           display:flex;
+           text-align:center;
+           margin:0px auto;
+
+           a{
+            text-decoration:none;
+            text-align:center;
+            margin:0px auto;
+           }
+           a:hover{
+            text-decoration:none;
+            margin:0px auto;
+           }
+         }
+        .copyCont{
+         font-size:10px;
+        }
+      }
 }
 
 //media 680px
@@ -729,9 +770,29 @@ p{
           }
        }
       }
-      footer .footer_container .copyCont{
-        font-size:10px;
+      footer .footer_container{
+       .social{
+           width:80%;
+           padding:10px;
+           display:flex;
+           text-align:center;
+          margin:0px auto;
+
+           a{
+            text-decoration:none;
+            text-align:center;
+            margin:0px auto;
+           }
+           a:hover{
+            text-decoration:none;
+            margin:0px auto;
+           }
+         }
+        .copyCont{
+         font-size:10px;
+        }
       }
+      
       .contMain .homeListContainer .card_col .card_home{
         width:100%;
       }
