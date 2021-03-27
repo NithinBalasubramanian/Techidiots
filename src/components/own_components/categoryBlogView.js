@@ -3,6 +3,7 @@ import '../../App.scss';
 import axios from '../../apiInstance/instance_API';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
+import moment from 'moment';
 
 const CategoryBlogView = () => {
   
@@ -42,7 +43,7 @@ const CategoryBlogView = () => {
     <div className="homeListContainer">
        <div className="row">
          <div className="col-md-8">
-         { ListTopdata.map((itm,k) => {
+         { Listdata.map((itm,k) => {
                 if(k === 0 || k === 1  ){
                     return(
                          <div className="card_top_home">
@@ -63,7 +64,7 @@ const CategoryBlogView = () => {
              }
           </div>
         <div className="col-md-4">
-           { ListTopdata.map((itm,k) => {
+           { Listdata.map((itm,k) => {
                 if(k > 1 && k < 5 ){
                     return(
                          <div className="card_top_sub_home">
