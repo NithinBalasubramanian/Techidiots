@@ -11,7 +11,7 @@ const Footer = () => {
         <footer>
           <div className="footer_container">
             <div className="social">
-                <a href="" target="_blank">
+                <a href="https://github.com/NithinBalasubramanian" target="_blank">
                     <AiFillGithub size="20px" color="#fff" style={{margin:"10px"}} />
                 </a>
                 <a href="" target="_blank">
