@@ -8,7 +8,7 @@ const Footer = () => {
     let Year  = date.getFullYear();
     
     const subscribe = () => {
-        console.log('subscribed");
+        console.log("subscribed");
     }
 
     return(
@@ -22,19 +22,19 @@ const Footer = () => {
             </div>
             <div className="social">
                 <a href="https://github.com/NithinBalasubramanian" target="_blank" rel="noopener noreferrer">
-                    <AiFillGithub size="20px" color="#fff" style={{margin:"10px"}} />
+                    <AiFillGithub size="35px" color="#fff" style={{margin:"10px"}} />
                 </a>
                 <a href="https://www.linkedin.com/in/techidiots-in-2203ba20a/" target="_blank" rel="noopener noreferrer">
-                    <AiFillLinkedin size="20px" color="#fff" style={{margin:"10px"}} />
+                    <AiFillLinkedin size="35px" color="#fff" style={{margin:"10px"}} />
                 </a>
                 <a href="https://twitter.com/Techidiots3" target="_blank" rel="noopener noreferrer">
-                    <AiFillTwitterCircle size="20px" color="#fff" style={{margin:"10px"}} />
+                    <AiFillTwitterCircle size="35px" color="#fff" style={{margin:"10px"}} />
                 </a>
                 <a href="https://www.facebook.com/TechIdiots-101195472074045" target="_blank" rel="noopener noreferrer">
-                    <AiFillFacebook size="20px" color="#fff" style={{margin:"10px"}} />
+                    <AiFillFacebook size="35px" color="#fff" style={{margin:"10px"}} />
                 </a>
                 <a href="https://www.instagram.com/techidiots/" target="_blank" rel="noopener noreferrer">
-                    <AiFillInstagram size="20px" color="#fff" style={{margin:"10px"}} />
+                    <AiFillInstagram size="35px" color="#fff" style={{margin:"10px"}} />
                 </a>
             </div>
             <p className="copyCont">2020 - { Year } - &copy; || All Right Reserved  <br/>
