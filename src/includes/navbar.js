@@ -21,9 +21,9 @@ const Navbar = () => {
       <div className="NavbarMain">
         <div className="NavContainer row">
             <div className="col-md-4 navHead">
-                <div className="navHeadLogo">
+                <Link className="navHeadLogo" to="/" >
                     <img src={logo} alt="Tech Idiots" className="logo_img" />
-                </div>
+                </Link>
                 <div className="navHeadMenu">
                     <BiMenuAltLeft onClick={ sidebarStatusHandler }  size="40px" color="#fff" style={{margin:"10px"}}/>
                 </div>
