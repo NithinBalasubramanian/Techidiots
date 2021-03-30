@@ -171,24 +171,31 @@ footer{
     text-align:center;
    
     .subscribe{
-     width:80%;
+     width:100%;
      padding:20px 10px;
      
      .subscribeColm{
-      width:80%;
+      width:60%;
       display:flex;
       
       .subscribeInput{
-        width:80%;
+        width:70%;
         padding:10px;
         outline:none;
+        border:none;
+        border-right:2px solid $primaryColor;
       }
       .subscribeBtn{
-        width:20%;
+        width:30%;
         letter-spacing:1px;
         color:$primaryColor;
         background-color:#fff;
         padding:10px 20px;
+        border:none;
+      }
+      .subscribeBtn:hover{
+        color:#fff;
+        background-color:$primaryColor;
       }
      }
     }
@@ -794,8 +801,34 @@ p{
        }
       }
       footer .footer_container{
+       
+       .subscribe{
+          width:100%;
+          padding:20px 10px;
+
+          .subscribeColm{
+           width:100%;
+           display:flex;
+
+           .subscribeInput{
+             width:60%;
+             padding:8px;
+             outline:none;
+             border:none;
+             border-right:2px solid $primaryColor;
+           }
+           .subscribeBtn{
+             width:40%;
+             letter-spacing:1px;
+             color:$primaryColor;
+             background-color:#fff;
+             padding:10px 20px;
+             border:none;
+             font-size: 14px;
+           }
+          }
        .social{
-           width:80%;
+           width:100%;
            padding:10px;
            display:flex;
            text-align:center;
