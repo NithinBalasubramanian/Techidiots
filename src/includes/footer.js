@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="footer_container">
             <div className="subscribe">
                 <div className="subscribeColm">
-                    <input type="email" className="subscribeInput" ref="email" placeholder="example@email.com" />
+                    <input type="email" className="subscribeInput" ref={ email } placeholder="example@email.com" />
                     <button type="button" onClick={ subscribe } className="subscribeBtn" >SUBSCRIBE</button>
                 </div>
             </div>
