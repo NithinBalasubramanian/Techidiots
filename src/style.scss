@@ -184,6 +184,8 @@ footer{
         outline:none;
         border:none;
         border-right:2px solid $primaryColor;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
       }
       .subscribeBtn{
         width:30%;
@@ -192,6 +194,8 @@ footer{
         background-color:#fff;
         padding:10px 20px;
         border:none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
       }
       .subscribeBtn:hover{
         color:#fff;
@@ -827,6 +831,7 @@ p{
              font-size: 14px;
            }
           }
+       }
        .social{
            width:100%;
            padding:10px;
