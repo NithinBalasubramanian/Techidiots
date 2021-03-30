@@ -191,7 +191,7 @@ footer{
       .subscribeBtn{
         width:30%;
         letter-spacing:1px;
-        color:$primaryColor;
+        color:#fff;
         background-color:$activeColor;
         padding:10px 20px;
         border:none;
@@ -199,7 +199,7 @@ footer{
         border-bottom-right-radius: 5px;
       }
       .subscribeBtn:hover{
-        color:#fff;
+        color:$primaryColor;
         background-color:#fff;
       }
      }
@@ -825,7 +825,6 @@ p{
            .subscribeBtn{
              width:40%;
              letter-spacing:1px;
-             color:$primaryColor;
              background-color:$activeColor;
              padding:10px 20px;
              border:none;
