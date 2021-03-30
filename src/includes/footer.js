@@ -1,14 +1,19 @@
-import React from 'react';
+import React , { useRef , useState } from 'react';
 import '../style.scss';
 import { AiFillGithub , AiFillLinkedin , AiFillTwitterCircle , AiFillFacebook , AiFillInstagram } from 'react-icons/ai';
 
 const Footer = () => {
     let date=new Date();
+    
+    let [ subscribeStatus , setSubscribeStatus ] = useState(false); 
+    
+    let email = useRef(null);
 
     let Year  = date.getFullYear();
     
     const subscribe = () => {
-        console.log("subscribed");
+        let emailSubscribe = email.target.value();
+        alert(emailSubscribe);
     }
 
     return(
@@ -16,7 +21,7 @@ const Footer = () => {
           <div className="footer_container">
             <div className="subscribe">
                 <div className="subscribeColm">
-                    <input type="email" className="subscribeInput" placeholder="example@email.com" />
+                    <input type="email" className="subscribeInput" ref="email" placeholder="example@email.com" />
                     <button type="button" onClick={ subscribe } className="subscribeBtn" >SUBSCRIBE</button>
                 </div>
             </div>
