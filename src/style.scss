@@ -192,7 +192,7 @@ footer{
         width:30%;
         letter-spacing:1px;
         color:$primaryColor;
-        background-color:#fff;
+        background-color:$activeColor;
         padding:10px 20px;
         border:none;
         border-top-right-radius: 5px;
@@ -200,7 +200,7 @@ footer{
       }
       .subscribeBtn:hover{
         color:#fff;
-        background-color:$activeColor;
+        background-color:#fff;
       }
      }
     }
@@ -826,7 +826,7 @@ p{
              width:40%;
              letter-spacing:1px;
              color:$primaryColor;
-             background-color:#fff;
+             background-color:$activeColor;
              padding:10px 20px;
              border:none;
              font-size: 14px;
