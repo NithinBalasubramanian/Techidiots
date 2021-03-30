@@ -6,10 +6,20 @@ const Footer = () => {
     let date=new Date();
 
     let Year  = date.getFullYear();
+    
+    const subscribe = () => {
+        console.log('subscribed");
+    }
 
     return(
         <footer>
           <div className="footer_container">
+            <div className="subscribe">
+                <div className="subscribeColm">
+                    <input type="email" className="subscribeInput" placeholder="example@email.com" />
+                    <button type="button" onClick={ subscribe } className="subscribeBtn" >SUBSCRIBE</button>
+                </div>
+            </div>
             <div className="social">
                 <a href="https://github.com/NithinBalasubramanian" target="_blank" rel="noopener noreferrer">
                     <AiFillGithub size="20px" color="#fff" style={{margin:"10px"}} />
