@@ -12,7 +12,7 @@ const Footer = () => {
     let Year  = date.getFullYear();
     
     const subscribe = () => {
-        let emailSubscribe = email.target.value();
+        let emailSubscribe = email.current.value();
         alert(emailSubscribe);
     }
 
