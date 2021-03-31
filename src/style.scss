@@ -170,6 +170,41 @@ footer{
     margin:10px auto;
     text-align:center;
    
+    .subscribe{
+     width:100%;
+     padding:20px 10px;
+     
+     .subscribeColm{
+      width:60%;
+      display:flex;
+      margin:0 auto;
+      
+      .subscribeInput{
+        width:70%;
+        padding:10px;
+        outline:none;
+        border:none;
+        border-right:2px solid $primaryColor;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      .subscribeBtn{
+        width:30%;
+        letter-spacing:1px;
+        color:#fff;
+        background-color:$activeColor;
+        padding:10px 20px;
+        border:none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .subscribeBtn:hover{
+        color:$primaryColor;
+        background-color:#fff;
+      }
+     }
+    }
+   
      .social{
       width:50%;
       padding:10px;
@@ -771,8 +806,34 @@ p{
        }
       }
       footer .footer_container{
+       
+       .subscribe{
+          width:100%;
+          padding:20px 10px;
+
+          .subscribeColm{
+           width:100%;
+           display:flex;
+
+           .subscribeInput{
+             width:60%;
+             padding:8px;
+             outline:none;
+             border:none;
+             border-right:2px solid $primaryColor;
+           }
+           .subscribeBtn{
+             width:40%;
+             letter-spacing:1px;
+             background-color:$activeColor;
+             padding:10px 20px;
+             border:none;
+             font-size: 14px;
+           }
+          }
+       }
        .social{
-           width:80%;
+           width:100%;
            padding:10px;
            display:flex;
            text-align:center;
