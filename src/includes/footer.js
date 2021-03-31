@@ -20,10 +20,10 @@ const Footer = () => {
         <footer>
           <div className="footer_container">
             <div className="subscribe">
-                <div className="subscribeColm">
+                {/* <div className="subscribeColm">
                     <input type="email" className="subscribeInput" ref={ email } placeholder="example@email.com" />
                     <button type="button" onClick={ subscribe } className="subscribeBtn" >SUBSCRIBE</button>
-                </div>
+                </div> */}
             </div>
             <div className="social">
                 <a href="https://github.com/NithinBalasubramanian" target="_blank" rel="noopener noreferrer">

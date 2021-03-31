@@ -84,7 +84,7 @@ const CategoryBlogView = () => {
              }
          </div>
          <div className="col-md-12 midAbout">
-            <h1> Techidiots.in / { category }</h1>
+            <h1> Techidiots / { category }</h1>
           </div>
       </div>
       <div className="row">
