@@ -41,7 +41,7 @@ const HomeListoutComponent = () => {
     }
     
     const fetchMid = () => {
-        axios.get('/blogFetch/techinfo')
+        axios.get('/blogFetch/techInfo')
       .then((res) => {
             setListInfo(res.data);
         })
