@@ -32,12 +32,11 @@ const Navbar = () => {
                 <div className="NavList">
                     <ul className="NavListMenu">
                         <li><NavLink to="/" activeClassName="activeMenu" exact>HOME</NavLink></li>
-                        <li><NavLink to="/Category/techNews" activeClassName="activeMenu" exact>TECH</NavLink></li>
-                        <li><NavLink to="/Category/space" activeClassName="activeMenu" exact>SPACE</NavLink></li>
+                        <li><NavLink to="/Category/techNews" activeClassName="activeMenu" exact>NEWS</NavLink></li>
+                        <li><NavLink to="/Category/techInfo" activeClassName="activeMenu" exact>TECH</NavLink></li>
                         <li ><NavLink to="/Category/automobiles" activeClassName="activeMenu" exact>AUTOMOBILES</NavLink></li>
                         <li><NavLink to="/Category/finance" activeClassName="activeMenu" exact>FINANCE</NavLink></li>
                         <li><NavLink to="/Category/programming" activeClassName="activeMenu" exact>PROGRAMMING</NavLink></li>
-                       <li className="ext"><NavLink to="/Books" activeClassName="activeMenu">BOOKS</NavLink></li>
                     </ul>
                 </div>
             </div>
@@ -50,10 +49,10 @@ const Navbar = () => {
                     <li><NavLink to="/Category/techInfo" activeClassName="activeMenu" exact>TECH INFO</NavLink></li>
                     <li><NavLink to="/Category/finance" activeClassName="activeMenu" exact>FINANCE</NavLink></li>
                     <li><NavLink to="/Category/automobiles" activeClassName="activeMenu" exact>AUTOMOBILES</NavLink></li>
-                    <li><NavLink to="/Category/space" activeClassName="activeMenu" exact>SPACE</NavLink></li>
+//                     <li><NavLink to="/Category/space" activeClassName="activeMenu" exact>SPACE</NavLink></li>
                     <li><NavLink to="/Category/programming" activeClassName="activeMenu" exact>PROGRAMMING</NavLink></li>
                     <li><NavLink to="/Category/others" activeClassName="activeMenu" exact>OTHERS</NavLink></li>
-                    <li><NavLink to="/News" activeClassName="activeMenu">NEWS</NavLink></li>
+//                     <li><NavLink to="/News" activeClassName="activeMenu">NEWS</NavLink></li>
                     <li><NavLink to="/Books" activeClassName="activeMenu">BOOKS</NavLink></li>
                 </ul>
             </div>

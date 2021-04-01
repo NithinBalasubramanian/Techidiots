@@ -8,6 +8,8 @@ const HomeListoutComponent = () => {
   
   let [ Listdata , setListdata ] = useState([]);
   
+  let [ ListInfo , setListInfo ] = useState([]);
+  
   let [ ListTopdata , setListTopdata ] = useState([]);
 
   let [ FetchStatus , setFetchStatus ] = useState(true);
@@ -20,6 +22,9 @@ const HomeListoutComponent = () => {
       const timer = setTimeout(() => {
          fetchAll();
         }, 3000);
+      const timer1 = setTimeout(() => {
+         fetchMid();
+        }, 6000);
       return () => clearTimeout(timer);
       
     }, [])
@@ -29,6 +34,16 @@ const HomeListoutComponent = () => {
       .then((res) => {
             setListTopdata(res.data);
             setFetchStatus(false);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+    }
+    
+    const fetchMid = () => {
+        axios.get('/blogFetch/techInfo')
+      .then((res) => {
+            setListInfo(res.data);
         })
         .catch((error) => {
             console.log(error);
@@ -67,7 +82,7 @@ const HomeListoutComponent = () => {
                                 <h4>{ itm.title }</h4>
                                 <div className="byAuth">
                                     - by {itm.auther}
-                                    <small>{ moment(itm.createdOn).fromNow() }</small>
+                                    <small>{moment(itm.createdOn).fromNow()}</small>
                                 </div>
                                 <img src={itm.imgUrl} alt={ itm.title } width="100%"  /> 
                                 <p>{ itm.preheading } </p>
@@ -145,6 +160,27 @@ const HomeListoutComponent = () => {
                     )
                 })
             }
+       </div>
+       <div className="row">
+         <div className="col-md-8">
+             <h4>LATEST TECH ARTICLES</h4>
+            { ListInfo.map((itm,k) => {
+             return(
+               <div className="articleViewHome">
+                <div className="articleImage">
+                  <img src={itm.imgUrl} alt={ itm.title } width="100%" height="100%"  /> 
+                </div>
+                <div className="articleCont">
+                  <h4>{ itm.title }</h4>
+                </div>
+             </div>
+             )
+            })
+           }
+          </div>
+         <div className="col-md-4">
+             
+          </div>
        </div>
     </div>
     </>
