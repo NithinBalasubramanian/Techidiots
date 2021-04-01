@@ -9,6 +9,8 @@ const HomeListoutComponent = () => {
   let [ Listdata , setListdata ] = useState([]);
   
   let [ ListInfo , setListInfo ] = useState([]);
+
+  let [ ListNews , setListNews ] = useState([]);
   
   let [ ListTopdata , setListTopdata ] = useState([]);
 
@@ -20,11 +22,11 @@ const HomeListoutComponent = () => {
         fetchAbove();
       
       const timer = setTimeout(() => {
-         fetchAll();
+         fetchMid();
         }, 3000);
       const timer1 = setTimeout(() => {
-         fetchMid();
-        }, 6000);
+         fetchAll();
+        }, 5000);
       return () => clearTimeout(timer);
       
     }, [])
@@ -41,9 +43,16 @@ const HomeListoutComponent = () => {
     }
     
     const fetchMid = () => {
-        axios.get('/blogFetch/techInfo')
+       axios.get('/blogFetchHome/techInfo')
       .then((res) => {
             setListInfo(res.data);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+        axios.get('/blogFetchHome/techNews')
+      .then((res) => {
+            setListNews(res.data);
         })
         .catch((error) => {
             console.log(error);
@@ -115,9 +124,46 @@ const HomeListoutComponent = () => {
          </div>
          <div className="col-md-12 midAbout">
             <p>About Tech Idiots</p>
-            <h1><span>TechIdiots </span>is developed to give YOU a platform to <span>VIEW</span> and <span>GAIN</span> more information on latest <span>TECH</span> Based NEWS and information all in one . This <span>REFERS</span> information from many<span>TRUSTABLE</span>  resources and <span>PRESENT</span> before YOU .... </h1>
+            <h1><span>Tech Idiots </span>is developed to give YOU a platform to <span>VIEW</span> and <span>GAIN</span> more information on latest <span>TECH</span> Based NEWS and information all in one . This <span>REFERS</span> information from many<span>TRUSTABLE</span>  resources and <span>PRESENT</span> before YOU .... </h1>
           </div>
       </div>
+      <div className="row">
+         <div className="col-md-6">
+             <h4 className="listHeading"><u>LATEST TECH ARTICLES</u></h4>
+            { ListInfo.map((itm,k) => {
+             return(
+               <Link to={`/Blog/${itm.category}/${itm.url}`} exact  className="articleViewHome">
+                <div className="articleImage">
+                  <img src={itm.imgUrl} alt={ itm.title } width="100%" height="100%"  /> 
+                </div>
+                <div className="articleCont">
+                  <small>{ moment(itm.createdOn).fromNow() }</small>
+                  <h4>{ itm.title }</h4>
+                </div>
+             </Link>
+             )
+            })
+           }
+          </div>
+         <div className="col-md-6">
+         <h4 className="listHeading"><u>LATEST TECH NEWS </u></h4>
+            { ListNews.map((itm,k) => {
+             return(
+               <Link to={`/Blog/${itm.category}/${itm.url}`} exact  className="articleViewHome">
+                <div className="articleImage">
+                  <img src={itm.imgUrl} alt={ itm.title } width="100%" height="100%"  /> 
+                </div>
+                <div className="articleCont">
+                  <small>{ moment(itm.createdOn).fromNow() }</small>
+                  <h4>{ itm.title }</h4>
+                </div>
+             </Link>
+             )
+            })
+           }
+          </div>
+       </div>
+      <h4 className="listHeading"><u>TECH COLLECTIONS</u></h4>
       <div className="row">
                   { Listdata.map((itm,k) => {
                 if(k === 0 || k === 1 || k === 5 || k === 6 ){
@@ -160,27 +206,6 @@ const HomeListoutComponent = () => {
                     )
                 })
             }
-       </div>
-       <div className="row">
-         <div className="col-md-8">
-             <h4>LATEST TECH ARTICLES</h4>
-            { ListInfo.map((itm,k) => {
-             return(
-               <div className="articleViewHome">
-                <div className="articleImage">
-                  <img src={itm.imgUrl} alt={ itm.title } width="100%" height="100%"  /> 
-                </div>
-                <div className="articleCont">
-                  <h4>{ itm.title }</h4>
-                </div>
-             </div>
-             )
-            })
-           }
-          </div>
-         <div className="col-md-4">
-             
-          </div>
        </div>
     </div>
     </>

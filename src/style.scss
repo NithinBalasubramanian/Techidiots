@@ -173,6 +173,29 @@ footer{
     .subscribe{
      width:100%;
      padding:20px 10px;
+
+     .statusNone{
+       display:none;
+     }
+
+     .subscribedMsg{
+      text-align:center;
+      color:#fff;
+      margin:5px;
+      letter-spacing:2px;
+      font-size: 16px;
+      font-weight:700;
+      display:block;
+     }
+     
+     small{
+       text-align:center;
+       color:rgb(90, 87, 87);
+       padding:10px;
+       margin:10px;
+       letter-spacing:2px;
+       font-size: 12px;
+     }
      
      .subscribeColm{
       width:60%;
@@ -253,6 +276,12 @@ footer{
     width:90%;
     margin:0px auto;
     padding:80px 0px 20px 0px;
+
+    .listHeading{
+      padding:20px 0px;
+      color:$primaryColor;
+      letter-spacing: 2px;
+    }
     
     .card_top_home{
       width:100%;
@@ -590,10 +619,11 @@ p{
     .card_recent{
       width:100%;
       height:auto;
-      padding:12px 0px;
-      border-radius:5px;
-      border-bottom:4px solid $primaryColor;
-      margin-bottom:20px;
+      padding: 0px 0px 12px 0px;
+      border-radius: 5px;
+      border-bottom: 4px solid #40e693;
+      margin-bottom: 20px;
+      overflow: hidden;
       
       a{
         text-decoration:none;
@@ -623,20 +653,31 @@ p{
   overflow:hidden;
   background-color: #f2fffa;
   box-shadow: 0 5px 10px rgb(154 160 185 / 5%), 0 15px 40px rgb(166 173 201 / 20%);
- 
+  text-decoration: none;
+
   .articleImage{
    width:40%;
    height:135px;
   }
  .articleCont{
    width:60%;
+
+   small{
+     padding:3px 10px;
+     color:$activeColor;
+   }
    
   h4{
-   color:$primaryColor;
+   color:$HeadingColor;
    font-size:18px;
    padding:10px;
   }
  }
+}
+
+.articleViewHome:hover{
+  background:$hoverColor;
+  text-decoration: none;
 }
 
 .mobileNav{
@@ -731,6 +772,27 @@ p{
         }
       }
     }
+  }
+  .articleViewHome{
+  
+    .articleImage{
+     width:40%;
+     height:120px;
+    }
+   .articleCont{
+     width:60%;
+  
+     small{
+       padding:2px 10px;
+       color:$activeColor;
+     }
+     
+    h4{
+     color:$HeadingColor;
+     font-size:13px;
+     padding:10px;
+    }
+   }
   }
   .mobOn{
     display:block;
@@ -836,6 +898,12 @@ p{
        .subscribe{
           width:100%;
           padding:20px 10px;
+
+          small{
+            margin:6px;
+            padding:0px;
+            font-size:10px;
+          }
 
           .subscribeColm{
            width:100%;
