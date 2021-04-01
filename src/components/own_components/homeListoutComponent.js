@@ -67,7 +67,7 @@ const HomeListoutComponent = () => {
                                 <h4>{ itm.title }</h4>
                                 <div className="byAuth">
                                     - by {itm.auther}
-                                    <small>{ moment(itm.createdOn).fromNow() }</small>
+                                    <small>{moment(itm.createdOn).fromNow()}</small>
                                 </div>
                                 <img src={itm.imgUrl} alt={ itm.title } width="100%"  /> 
                                 <p>{ itm.preheading } </p>
@@ -145,6 +145,22 @@ const HomeListoutComponent = () => {
                     )
                 })
             }
+       </div>
+       <div className="row">
+         <div className="col-md-8">
+             <h4>LATEST TECH ARTICLES</h4>
+             <div className="articleViewHome">
+                <div className="articleImage">
+                  <img src="" width="100%" height="100%" alt="" /> 
+                </div>
+                <div className="articleCont">
+                  
+                </div>
+             </div>
+          </div>
+         <div className="col-md-4">
+             
+          </div>
        </div>
     </div>
     </>
