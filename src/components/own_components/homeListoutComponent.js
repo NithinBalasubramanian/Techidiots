@@ -168,11 +168,10 @@ const HomeListoutComponent = () => {
              return(
                <div className="articleViewHome">
                 <div className="articleImage">
-                  <img src={itm.imgUrl} alt={ itm.title } width="100%" height="100%" alt="" /> 
+                  <img src={itm.imgUrl} alt={ itm.title } width="100%" height="100%"  /> 
                 </div>
                 <div className="articleCont">
                   <h4>{ itm.title }</h4>
-                  <p>{ itm.preheading } </p>
                 </div>
              </div>
              )
