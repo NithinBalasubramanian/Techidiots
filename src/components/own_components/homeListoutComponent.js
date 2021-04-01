@@ -22,7 +22,7 @@ const HomeListoutComponent = () => {
       const timer = setTimeout(() => {
          fetchAll();
         }, 3000);
-      const timer = setTimeout(() => {
+      const timer1 = setTimeout(() => {
          fetchMid();
         }, 6000);
       return () => clearTimeout(timer);
