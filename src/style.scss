@@ -617,25 +617,24 @@ p{
   width:100%;
   height:auto;
   display:flex;
-  margin:10px 0px;
+  margin:14px 0px;
   border-right:2px solid $primaryColor;
+  border-radius:4px;
+  overflow:hidden;
+  background-color: #f2fffa;
+  box-shadow: 0 5px 10px rgb(154 160 185 / 5%), 0 15px 40px rgb(166 173 201 / 20%);
  
   .articleImage{
    width:40%;
-   height:220px;
+   height:135px;
   }
  .articleCont{
    width:60%;
    
   h4{
    color:$primaryColor;
-   font-size:22px;
+   font-size:18px;
    padding:10px;
-  }
-  p{
-   color:$cardColor;
-   font-size:14px;
-   padding:0px 10px;
   }
  }
 }
