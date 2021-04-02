@@ -95,14 +95,42 @@ const BlogView = () => {
                                             ) 
                                           } 
                                         }
-                                       return (
-                                           <p  className="paraSubCont" key={s_k} >{sub_itm.Content}</p>
-                                       ) 
+                                        if(sub_itm.SubHeading == 'head'){
+                                            return (
+                                                <h2  key={s_k} >{sub_itm.Content}</h2>
+                                            ) 
+                                        }else if(sub_itm.SubHeading == 'sub_head'){
+                                            return (
+                                                <h4  key={s_k} >{sub_itm.Content}</h4>
+                                            ) 
+                                        }else{
+                                            return (
+                                                <p  className="paraSubCont" key={s_k} >{sub_itm.Content}</p>
+                                            ) 
+                                        }
                                     })
                                    : null 
                                    }
 
                                   <ReactPlayer url={itm.videoLink } width="100%" height={ (itm.videoLink) ? "400px" : "0px" } />
+                                  { (itm.subLink) ? 
+                                       itm.subLink.map((subLink,l_k) => {
+                                        if(subLink.linkFor == 'ref' ){
+                                            var linkFor = "For more reference and help";
+                                        }else if(subLink.linkFor == 'also_view'){
+                                            var linkFor = "Also check related article ";
+                                        }else{
+                                            var linkFor = "For above mentioned Link";
+                                        }
+                                        return(
+                                            <div className="links">
+                                                <p>{ linkFor } <a href={ subLink.link }  target="_blank" rel="noopener noreferrer">Click Here</a></p>
+                                            </div>
+                                        )
+                                      }
+                                    ) 
+                                  : null
+                                  }
                                   <p className="reference"> Reference : { itm.reference } </p>
                             </div>
                           </div>

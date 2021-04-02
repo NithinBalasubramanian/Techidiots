@@ -44,14 +44,14 @@ const Footer = () => {
     return(
         <footer>
           <div className="footer_container">
-            <div className="subscribe">
+            {/* <div className="subscribe">
                 <small className={ (subscribeStatus) ? 'subscribedMsg' : 'statusNone '}>Subscribed Successfully</small>
                 <div className="subscribeColm">
                     <input type="email" className="subscribeInput" ref={ email } placeholder="example@email.com" value={ emailData } onChange={ emailHandler } />
                     <button type="button" onClick={ subscribe } className="subscribeBtn" >SUBSCRIBE</button>
                 </div>
                 <small>No worries! We will not spam your inbox ); </small> 
-            </div>
+            </div> */}
             <div className="social">
                 <a href="https://github.com/NithinBalasubramanian" target="_blank" rel="noopener noreferrer">
                     <AiFillGithub size="35px" color="#fff" style={{margin:"10px"}} />
@@ -70,7 +70,7 @@ const Footer = () => {
                 </a>
             </div>
             <p className="copyCont">2020 - { Year } - &copy; || All Right Reserved  <br/>
-            <a href="mailto:info@techidiots.in" target="_blank">info@techidiots.in</a> || TECH IDIOTE || Powered by Pingifinit Software Technology</p>
+            <a href="mailto:info@techidiots.in" target="_blank">info@techidiots.in</a> || TECHIDIOTE || Powered by Pingifinit Software Technology</p>
           </div>
         </footer>
     )

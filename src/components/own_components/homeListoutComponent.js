@@ -123,8 +123,8 @@ const HomeListoutComponent = () => {
              }
          </div>
          <div className="col-md-12 midAbout">
-            <p>About Tech Idiots</p>
-            <h1><span>Tech Idiots </span>is developed to give YOU a platform to <span>VIEW</span> and <span>GAIN</span> more information on latest <span>TECH</span> Based NEWS and information all in one . This <span>REFERS</span> information from many<span>TRUSTABLE</span>  resources and <span>PRESENT</span> before YOU .... </h1>
+            <p>About TechIdiots</p>
+            <h1><span>TechIdiots </span>is developed to give YOU a platform to <span>VIEW</span> and <span>GAIN</span> more information on latest <span>TECH</span> Based NEWS and information all in one . This <span>REFERS</span> information from many<span>TRUSTABLE</span>  resources and <span>PRESENT</span> before YOU .... </h1>
           </div>
       </div>
       <div className="row">
