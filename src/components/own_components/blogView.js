@@ -110,7 +110,9 @@ const BlogView = () => {
                                             ) 
                                         }else if(sub_itm.SubHeading == 'tweet'){
                                             return (
-                                                <TweetEmbed  id={ sub_itm.Content } />
+                                                <div className="tweet">
+                                                 <TweetEmbed  id={ sub_itm.Content } />
+                                                </div>
                                             ) 
                                         }else{
                                             return (
