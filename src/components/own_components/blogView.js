@@ -3,7 +3,8 @@ import { useParams } from 'react-router';
 import axios from '../../apiInstance/instance_API';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
+import TweetEmbed from 'react-tweet-embed';
 
 const BlogView = () => {
 
@@ -102,6 +103,14 @@ const BlogView = () => {
                                         }else if(sub_itm.SubHeading == 'sub_head'){
                                             return (
                                                 <h4  key={s_k} >{sub_itm.Content}</h4>
+                                            ) 
+                                        }else if(sub_itm.SubHeading == 'sub_img'){
+                                            return (
+                                                <img src={sub_itm.Content} alt="techidiots" width="100%" height="auto" className="sub_img" />
+                                            ) 
+                                        }else if(sub_itm.SubHeading == 'tweet'){
+                                            return (
+                                                <TweetEmbed  id={ sub_itm.Content } />
                                             ) 
                                         }else{
                                             return (
