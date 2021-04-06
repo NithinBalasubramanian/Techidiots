@@ -87,15 +87,6 @@ const BlogView = () => {
                                 <p className="paraMainCont">{itm.blog}</p>
                                    { (itm.subPara) ? 
                                        itm.subPara.map((sub_itm,s_k) => {
-                                       if (itm.subImgUrl){
-                                          if (s_k === 5){
-                                            return (
-                                                <>
-                                                 <img src={itm.subImgUrl} alt={ itm.title } width="100%" height="auto" className="subImageDisp" /> 
-                                                </>
-                                            ) 
-                                          } 
-                                        }
                                         if(sub_itm.SubHeading == 'head'){
                                             return (
                                                 <h2  key={s_k} >{sub_itm.Content}</h2>
@@ -113,6 +104,10 @@ const BlogView = () => {
                                                 <div className="tweet">
                                                  <TweetEmbed  id={ sub_itm.Content } />
                                                 </div>
+                                            ) 
+                                        }else if(sub_itm.SubHeading == 'bold'){
+                                            return (
+                                                <p><b  key={s_k} >{sub_itm.Content}</b></p>
                                             ) 
                                         }else{
                                             return (
