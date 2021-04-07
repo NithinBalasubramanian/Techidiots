@@ -17,7 +17,7 @@ const HomeListoutComponent = () => {
   let [ FetchStatus , setFetchStatus ] = useState(true);
 
     useEffect(() => {
-        document.title ='TechIdiots - The Collections of Tech based News and Info';
+        document.title ='TechIdiots - The Collections of Tech for Techies';
         window.scrollTo(0, 0);
         fetchAbove();
       
