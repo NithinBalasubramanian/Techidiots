@@ -4,6 +4,7 @@ import axios from '../../apiInstance/instance_API';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 import moment from 'moment';
+import  { Helmet } from 'react-helmet';
 
 const CategoryBlogView = () => {
   
@@ -29,6 +30,8 @@ const CategoryBlogView = () => {
             console.log(error);
         })
     }
+
+    let onUrl = window.location.href;
     
   return(
     <>
@@ -40,6 +43,17 @@ const CategoryBlogView = () => {
             </div>
         </div>
     </div>
+    <Helmet>
+        <title>TechIdiots - The Collections of Tech for Techies</title>
+        <meta name="description" content="Techidiots is developed to be a platform to collect latest techology informations from trustable sources and analyse it to present before you."/>
+        <link rel="canonical" href={ onUrl } />
+
+        <meta property="og:title" content="TechIdiots - The Collections of Tech for Techies"/>
+        <meta property="og:description" content="Techidiots is developed to be a platform to collect latest techology informations from trustable sources and analyse it to present before you."/>
+        
+        <meta property="twitter:title" content="TechIdiots - The Collections of Tech for Techies" />
+        <meta property="twitter:description" content="Techidiots is developed to be a platform to collect latest techology informations from trustable sources and analyse it to present before you." />
+    </Helmet>
     <div className="homeListContainer">
        <div className="row">
          <div className="col-md-8">

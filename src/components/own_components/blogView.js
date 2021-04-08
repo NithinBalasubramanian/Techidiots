@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import moment from 'moment';
 import ReactPlayer from 'react-player';
 import TweetEmbed from 'react-tweet-embed';
+import  { Helmet } from 'react-helmet';
 
 const BlogView = () => {
 
@@ -48,6 +49,8 @@ const BlogView = () => {
         window.scrollTo(0, 0);
     }, [url]) 
 
+    let onUrl = window.location.href;
+
   return(
     <>
       <div className={(FetchStatus) ? "preLoader" : "preNone" } >
@@ -61,9 +64,19 @@ const BlogView = () => {
       <div className="pageContainer">
             <div className="blogContent">
                 { datas.map((itm,k) => { 
-                    document.title=itm.title;
                     return(
                         <>
+                        <Helmet>
+                            <title>{ itm.title }</title>
+                            <meta name="description" content={ itm.preheading } />
+                            <link rel="canonical" href={ onUrl } />
+
+                            <meta property="og:title" content={ itm.title } />
+                            <meta property="og:description" content={ itm.preheading } />
+                            
+                            <meta property="twitter:title" content={ itm.title }  />
+                            <meta property="twitter:description" content={ itm.preheading } />
+                        </Helmet>
                         <div className="col-md-6">
                             <div className="category">
                                 { itm.category }
@@ -87,25 +100,25 @@ const BlogView = () => {
                                 <p className="paraMainCont">{itm.blog}</p>
                                    { (itm.subPara) ? 
                                        itm.subPara.map((sub_itm,s_k) => {
-                                        if(sub_itm.SubHeading == 'head'){
+                                        if(sub_itm.SubHeading === 'head'){
                                             return (
                                                 <h2  key={s_k} >{sub_itm.Content}</h2>
                                             ) 
-                                        }else if(sub_itm.SubHeading == 'sub_head'){
+                                        }else if(sub_itm.SubHeading === 'sub_head'){
                                             return (
                                                 <h4  key={s_k} >{sub_itm.Content}</h4>
                                             ) 
-                                        }else if(sub_itm.SubHeading == 'sub_img'){
+                                        }else if(sub_itm.SubHeading === 'sub_img'){
                                             return (
                                                 <img src={sub_itm.Content} alt="techidiots" width="100%" height="auto" className="sub_img" />
                                             ) 
-                                        }else if(sub_itm.SubHeading == 'tweet'){
+                                        }else if(sub_itm.SubHeading === 'tweet'){
                                             return (
                                                 <div className="tweet">
                                                  <TweetEmbed  id={ sub_itm.Content } />
                                                 </div>
                                             ) 
-                                        }else if(sub_itm.SubHeading == 'bold'){
+                                        }else if(sub_itm.SubHeading === 'bold'){
                                             return (
                                                 <p><b  key={s_k} >{sub_itm.Content}</b></p>
                                             ) 
@@ -121,9 +134,9 @@ const BlogView = () => {
                                   <ReactPlayer url={itm.videoLink } width="100%" height={ (itm.videoLink) ? "400px" : "0px" } />
                                   { (itm.subLink) ? 
                                        itm.subLink.map((subLink,l_k) => {
-                                        if(subLink.linkFor == 'ref' ){
+                                        if(subLink.linkFor === 'ref' ){
                                             var linkFor = "For more reference and help";
-                                        }else if(subLink.linkFor == 'also_view'){
+                                        }else if(subLink.linkFor === 'also_view'){
                                             var linkFor = "Also check related article ";
                                         }else{
                                             var linkFor = "For above mentioned Link";
