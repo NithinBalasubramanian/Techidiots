@@ -32,6 +32,8 @@ const CategoryBlogView = () => {
     }
 
     let onUrl = window.location.href;
+  
+    let website = onUrl.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").split('/')[0];
     
   return(
     <>
@@ -54,7 +56,7 @@ const CategoryBlogView = () => {
 
         <meta property="og:image" content="https://techidiots.in/favicon.jpg"/>
         <meta property="og:url" content={ onUrl } />
-        <meta property="og:site_name" content={ 'www.'+ onUrl }/>
+        <meta property="og:site_name" content={ 'www.'+ website }/>
         <meta property="og:type" content="website" />
         <meta property="og:title" content="TechIdiots - The Collections of Tech for Techies"/>
         <meta property="og:description" content="Techidiots is developed to be a platform to collect latest techology informations from trustable sources and analyse it to present before you."/>
