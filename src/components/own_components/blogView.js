@@ -50,6 +50,8 @@ const BlogView = () => {
     }, [url]) 
 
     let onUrl = window.location.href;
+  
+    let website = onUrl.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").split('/')[0];
 
   return(
     <>
@@ -73,7 +75,7 @@ const BlogView = () => {
 
                             <meta property="og:image" content="https://techidiots.in/favicon.jpg"/>
                             <meta property="og:url" content={ onUrl } />
-                            <meta property="og:site_name" content={ 'www.'+onUrl }/>
+                            <meta property="og:site_name" content={ 'www.'+ website }/>
                             <meta property="og:type" content="website" />
                             <meta property="og:title" content={ itm.title } />
                             <meta property="og:description" content={ itm.preheading } />
