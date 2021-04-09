@@ -74,13 +74,13 @@ const BlogView = () => {
                             <meta property="og:image" content="https://techidiots.in/favicon.jpg"/>
                             <meta property="og:url" content={ onUrl } />
                             <meta property="og:site_name" content={ 'www.'+onUrl }/>
-                            <meta property="og:type" content="website">
+                            <meta property="og:type" content="website" />
                             <meta property="og:title" content={ itm.title } />
                             <meta property="og:description" content={ itm.preheading } />
                             
                             <meta property="twitter:url" content={ onUrl } />
-                            <meta property="twitter:card" content="summary_large_image">
-                            <meta property="twitter:image" content="https://techidiots.in/favicon.jpg">
+                            <meta property="twitter:card" content="summary_large_image" />
+                            <meta property="twitter:image" content="https://techidiots.in/favicon.jpg" />
                             <meta property="twitter:title" content={ itm.title }  />
                             <meta property="twitter:description" content={ itm.preheading } />
                                 
