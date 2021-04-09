@@ -89,13 +89,13 @@ const HomeListoutComponent = () => {
         <meta property="og:image" content="https://techidiots.in/favicon.jpg"/>
         <meta property="og:url" content="https://techidiots.in"/>
         <meta property="og:site_name" content="www.techidiots.in"/>
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="website" />
         <meta property="og:title" content="TechIdiots - The Collections of Tech for Techies"/>
         <meta property="og:description" content="Techidiots is developed to be a platform to collect latest techology informations from trustable sources and analyse it to present before you."/>
 
         <meta property="twitter:url" content="https://techidiots.in/" />
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:image" content="https://techidiots.in/favicon.jpg">
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content="https://techidiots.in/favicon.jpg" />
         <meta property="twitter:title" content="TechIdiots - The Collections of Tech for Techies" />
         <meta property="twitter:description" content="Techidiots is developed to be a platform to collect latest techology informations from trustable sources and analyse it to present before you." />
     </Helmet>
