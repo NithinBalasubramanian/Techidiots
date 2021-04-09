@@ -50,7 +50,6 @@ const Navbar = () => {
                     <li><NavLink to="/Category/automobiles" activeClassName="activeMenu" exact>AUTOMOBILES</NavLink></li>
                     <li><NavLink to="/Category/programming" activeClassName="activeMenu" exact>PROGRAMMING</NavLink></li>
                     <li><NavLink to="/Category/others" activeClassName="activeMenu" exact>OTHERS</NavLink></li>
-                    <li><NavLink to="/Books" activeClassName="activeMenu">BOOKS</NavLink></li>
                 </ul>
             </div>
         </div>
