@@ -48,9 +48,20 @@ const CategoryBlogView = () => {
         <meta name="description" content="Techidiots is developed to be a platform to collect latest techology informations from trustable sources and analyse it to present before you."/>
         <link rel="canonical" href={ onUrl } />
 
+        <title>TechIdiots - The Collections of Tech for Techies</title>
+        <meta name="description" content="Techidiots is developed to be a platform to collect latest techology informations from trustable sources and analyse it to present before you."/>
+        <link rel="canonical" href={ onUrl } />
+
+        <meta property="og:image" content="https://techidiots.in/favicon.jpg"/>
+        <meta property="og:url" content={ onUrl } />
+        <meta property="og:site_name" content={ 'www.'+ onUrl }/>
+        <meta property="og:type" content="website" />
         <meta property="og:title" content="TechIdiots - The Collections of Tech for Techies"/>
         <meta property="og:description" content="Techidiots is developed to be a platform to collect latest techology informations from trustable sources and analyse it to present before you."/>
-        
+
+        <meta property="twitter:url" content= { onUrl } />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content="https://techidiots.in/favicon.jpg" />
         <meta property="twitter:title" content="TechIdiots - The Collections of Tech for Techies" />
         <meta property="twitter:description" content="Techidiots is developed to be a platform to collect latest techology informations from trustable sources and analyse it to present before you." />
     </Helmet>
