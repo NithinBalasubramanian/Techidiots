@@ -70,6 +70,8 @@ const HomeListoutComponent = () => {
     }
 
     let onUrl = window.location.href;
+  
+    let website = onUrl.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").split('/')[0];
     
   return(
     <>
