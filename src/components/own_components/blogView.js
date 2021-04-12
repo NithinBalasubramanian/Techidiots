@@ -132,6 +132,17 @@ const BlogView = () => {
                                             return (
                                                 <p><b  key={s_k} >{sub_itm.Content}</b></p>
                                             ) 
+                                        }else if(sub_itm.SubHeading === 'youtube'){
+                                            return (
+                                               <ReactPlayer url={ sub_itm.Content } width="100%" height="400px" />
+                                            ) 
+                                        }else if(sub_itm.SubHeading === 'quotes'){
+                                            return (
+                                                <blockquote className="otro-blockquote">
+                                                 { sub_itm.Content }
+                                               </blockquote>
+                                                
+                                            ) 
                                         }else{
                                             return (
                                                 <p  className="paraSubCont" key={s_k} >{sub_itm.Content}</p>
@@ -141,7 +152,7 @@ const BlogView = () => {
                                    : null 
                                    }
 
-                                  <ReactPlayer url={itm.videoLink } width="100%" height={ (itm.videoLink) ? "400px" : "0px" } />
+                                  
                                   { (itm.subLink) ? 
                                        itm.subLink.map((subLink,l_k) => {
                                         if(subLink.linkFor === 'ref' ){
