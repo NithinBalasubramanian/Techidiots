@@ -603,13 +603,13 @@ p{
   }
  
  .otro-blockquote{
-  font-size: 1.4em;
-  width:60%;
-  margin:50px auto;
+  font-size: 16px;
+  width:80%;
+  margin:30px 0px;
   font-style:italic;
   color: #555555;
   padding:1.2em 30px 1.2em 75px;
-  border-left:8px solid #78C0A8 ;
+  border-left:8px solid $primarycolor;
   line-height:1.6;
   position: relative;
   background:#EDEDED;
@@ -630,7 +630,7 @@ p{
 
 .otro-blockquote span{
   display:block;
-  color:#333333;
+  color:$primaryColor;
   font-style: normal;
   font-weight: bold;
   margin-top:1em;
