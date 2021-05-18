@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../keypad.css';
 
-const Keypad = () -> {
+const Keypad = () => {
   return(
     <>
      <h1 class="title">Eyes on the screen</h1>
