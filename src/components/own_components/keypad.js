@@ -70,7 +70,7 @@ const Keypad = () => {
         </div>
         <h1 class="title">Hands on the keyboard</h1> 
     </>
-  );
+  )
 }
 
 export default Keypad;
