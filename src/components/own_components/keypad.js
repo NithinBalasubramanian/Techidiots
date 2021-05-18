@@ -73,4 +73,4 @@ const Keypad = () => {
   );
 }
 
-default  export Keypad;
+export default Keypad;
