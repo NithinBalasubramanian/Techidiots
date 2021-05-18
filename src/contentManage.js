@@ -3,6 +3,7 @@ import './style.scss';
 import HomeListoutComponent from './components/own_components/homeListoutComponent';
 import BlogView  from './components/own_components/blogView';
 import CategoryBlogView from './components/own_components/categoryBlogView';
+import Keypad from './components/own_components/keypad';
 import ApiTest from './components/collection_components/api_check';
 import { Switch , Route } from 'react-router-dom';
 
@@ -18,6 +19,9 @@ const ContentManager = () => {
        </Route>
       <Route path="/Category/:category" exact>
         <CategoryBlogView />
+       </Route>
+       <Route path="/keypad" exact>
+        <Keypad />
        </Route>
     </Switch>
     </div>
