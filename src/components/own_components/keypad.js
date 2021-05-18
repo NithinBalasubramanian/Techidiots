@@ -3,7 +3,7 @@ import '../../keypad.css';
 
 const Keypad = () => {
   return(
-    <>
+    <div className="keypadBody">
      <h1 class="title">Eyes on the screen</h1>
         <div class="keyboard">
           <ul class="row row-0">
@@ -69,7 +69,7 @@ const Keypad = () => {
           </ul>
         </div>
         <h1 class="title">Hands on the keyboard</h1> 
-    </>
+    </div>
   )
 }
 
