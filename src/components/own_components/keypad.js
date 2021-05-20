@@ -65,7 +65,7 @@ const Keypad = () => {
           <ul className="row row-2 keylist">
             <li className="pinky" id="caps">CAPS</li>
             <li className={ Keysetted === 'A' ? 'pinky selected': 'pinky' } id="A">A</li>
-            <li className="ring" id="S">S</li>
+            <li className={ Keysetted === 'S' ? 'ring selected': 'ring' } id="S">S</li>
             <li className={ Keysetted === 'D' ? 'middle selected': 'middle' } id="D">D</li>
             <li className={ Keysetted === 'F' ? 'pointer1st selected': 'pointer1st' } id="F">F</li>
             <li className={ Keysetted === 'G' ? 'pointer2nd selected': 'pointer2nd' } id="G">G</li>
