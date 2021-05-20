@@ -20,7 +20,7 @@ const Keypad = () => {
     }
 
     const handleKeyDown = (e) => {
-      if(e.key === keyNow){
+      if(e.key.toUpperCase() === keyNow){
         console.log("matched");
         changeChar();
       }
