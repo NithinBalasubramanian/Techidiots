@@ -1,58 +1,34 @@
-import React from 'react'
+import React, { useEffect , useState  } from 'react'
 import '../../keypad.css';
 
 const Keypad = () => {
   
-  const keys = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+  let [ Keysetted , setKeysetted ] = useState('');
 
-const timestamps = [];
+  let keyNow = '';
 
-timestamps.unshift(getTimestamp());
+    useEffect(() => {
+      changeChar();
+        window.addEventListener("keydown",handleKeyDown);
+    },[]);
 
-function getRandomNumber(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+    const changeChar = () => {
+        var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var result = randomChars. charAt(Math. floor(Math. random() * randomChars.length));
+        setKeysetted(result);
+        keyNow = result;
+    }
 
-function getRandomKey() {
-  return keys[getRandomNumber(0, keys.length-1)]
-}
-
-function targetRandomKey() {
-  const key = document.getElementById(getRandomKey());
-  key.classList.add("selected");
-  let start = Date.now()
-}
-
-function getTimestamp() {
-  return Math.floor(Date.now() / 1000)
-}
-
-document.addEventListener("keyup", event => {
-  const keyPressed = String.fromCharCode(event.keyCode);
-  const keyElement = document.getElementById(keyPressed);
-  const highlightedKey = document.querySelector(".selected");
-  
-  keyElement.classList.add("hit")
-  keyElement.addEventListener('animationend', () => {
-    keyElement.classList.remove("hit")
-  })
-  
-  if (keyPressed === highlightedKey.innerHTML) {
-    timestamps.unshift(getTimestamp());
-    const elapsedTime = timestamps[0] - timestamps[1];
-    console.log(`Character per minute ${60/elapsedTime}`)
-    highlightedKey.classList.remove("selected");
-    targetRandomKey();
-  } 
-})
-
-targetRandomKey();
+    const handleKeyDown = (e) => {
+      if(e.key === keyNow){
+        console.log("matched");
+        changeChar();
+      }
+    }
   
   return(
     <div className="keypadBody">
-     <h1 className="title">Eyes on the screen</h1>
+     <h1 className="title">Eyes on the screen - { Keysetted } </h1>
         <div className="keyboard">
           <ul className="row row-0 keylist">
             <li className="pinky" id="esc">ESC</li>
@@ -72,44 +48,44 @@ targetRandomKey();
           </ul>
           <ul className="row row-1 keylist">
             <li className="pinky" id="tab">TAB</li>
-            <li className="pinky" id="Q">Q</li>
-            <li className="ring" id="W">W</li>
-            <li className="middle" id="E">E</li>
-            <li className="pointer1st" id="R">R</li>
-            <li className="pointer2nd" id="T">T</li>
-            <li className="pointer2nd" id="Y">Y</li>
-            <li className="pointer1st" id="U">U</li>
-            <li className="middle" id="I">I</li>
-            <li className="ring" id="O">O</li>
-            <li className="pinky" id="P">P</li>
+            <li className={ Keysetted === 'Q' ? 'pinky selected': 'pinky' } id="Q" >Q</li>
+            <li className={ Keysetted === 'W' ? 'ring selected': 'ring' } id="W">W</li>
+            <li className={ Keysetted === 'E' ? 'middle selected': 'middle' } id="E">E</li>
+            <li className={ Keysetted === 'R' ? 'pointer1st selected': 'pointer1st' }  id="R">R</li>
+            <li className={ Keysetted === 'T' ? 'pointer2nd selected': 'pointer2nd' } id="T">T</li>
+            <li className={ Keysetted === 'Y' ? 'pointer2nd selected': 'pointer2nd' } id="Y">Y</li>
+            <li className={ Keysetted === 'U' ? 'pointer1st selected': 'pointer1st' }  id="U">U</li>
+            <li className={ Keysetted === 'I' ? 'middle selected': 'middle' } id="I">I</li>
+            <li className={ Keysetted === 'O' ? 'ring selected': 'ring' } id="O">O</li>
+            <li className={ Keysetted === 'P' ? 'pinky selected': 'pinky' } id="P">P</li>
             <li className="pinky" >[</li>
             <li className="pinky" >]</li>
             <li className="pinky" >\</li>
           </ul>
           <ul className="row row-2 keylist">
             <li className="pinky" id="caps">CAPS</li>
-            <li className="pinky" id="A">A</li>
+            <li className={ Keysetted === 'A' ? 'pinky selected': 'pinky' } id="A">A</li>
             <li className="ring" id="S">S</li>
-            <li className="middle" id="D">D</li>
-            <li className="pointer1st" id="F">F</li>
-            <li className="pointer2nd" id="G">G</li>
-            <li className="pointer2nd" id="H">H</li>
-            <li className="pointer1st" id="J">J</li>
-            <li className="middle" id="K">K</li>
-            <li className="ring" id="L">L</li>
+            <li className={ Keysetted === 'D' ? 'middle selected': 'middle' } id="D">D</li>
+            <li className={ Keysetted === 'F' ? 'pointer1st selected': 'pointer1st' } id="F">F</li>
+            <li className={ Keysetted === 'G' ? 'pointer2nd selected': 'pointer2nd' } id="G">G</li>
+            <li className={ Keysetted === 'H' ? 'pointer2nd selected': 'pointer2nd' } id="H">H</li>
+            <li className={ Keysetted === 'J' ? 'pointer1st selected': 'pointer1st' }  id="J">J</li>
+            <li className={ Keysetted === 'K' ? 'middle selected': 'middle' } id="K">K</li>
+            <li className={ Keysetted === 'L' ? 'ring selected': 'ring' } id="L">L</li>
             <li className="pinky" >:</li>
             <li className="pinky" >''</li>
             <li className="pinky" id="enter">ENTER</li>
           </ul>
           <ul className="row row-3 keylist">
             <li className="pinky" id="left-shift">SHIFT</li>
-            <li className="pinky" id="Z">Z</li>
-            <li className="ring" id="X">X</li>
-            <li className="middle" id="C">C</li>
-            <li className="pointer1st" id="V">V</li>
-            <li className="pointer2nd" id="B">B</li>
-            <li className="pointer2nd" id="N">N</li>
-            <li className="pointer1st" id="M">M</li>
+            <li className={ Keysetted === 'Z' ? 'pinky selected': 'pinky' } id="Z">Z</li>
+            <li className={ Keysetted === 'X' ? 'ring selected': 'ring' } id="X">X</li>
+            <li className={ Keysetted === 'C' ? 'middle selected': 'middle' } id="C">C</li>
+            <li className={ Keysetted === 'V' ? 'pointer1st selected': 'pointer1st' }  id="V">V</li>
+            <li className={ Keysetted === 'B' ? 'pointer2nd selected': 'pointer2nd' } id="B">B</li>
+            <li className={ Keysetted === 'N' ? 'pointer2nd selected': 'pointer2nd' } id="N">N</li>
+            <li className={ Keysetted === 'M' ? 'pointer1st selected': 'pointer1st' }  id="M">M</li>
             <li className="middle" >,</li>
             <li className="ring" >.</li>
             <li className="pinky" >;</li>
