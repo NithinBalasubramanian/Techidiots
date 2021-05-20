@@ -7,6 +7,8 @@ const Keypad = () => {
 
   let keyNow = '';
 
+  let [ CorrectCount , setCorrectCount ] = useState({ total : 0 , correct : 0 , error : 0 });
+
     useEffect(() => {
       changeChar();
         window.addEventListener("keydown",handleKeyDown);
@@ -21,14 +23,17 @@ const Keypad = () => {
 
     const handleKeyDown = (e) => {
       if(e.key.toUpperCase() === keyNow){
-        console.log("matched");
+        setCorrectCount(prev =>({...prev, correct: prev.correct + 1 , total : prev.total + 1 }));
         changeChar();
+      }
+      else{
+        setCorrectCount(prev =>({...prev, error: prev.error + 1, total : prev.total + 1 }));
       }
     }
   
   return(
     <div className="keypadBody">
-     <h1 className="title">Eyes on the screen - { Keysetted } </h1>
+     <h1 className="title"> Total COunt - { CorrectCount.total } || Correct count - { CorrectCount.correct }  || Error count - { CorrectCount.error }</h1>
         <div className="keyboard">
           <ul className="row row-0 keylist">
             <li className="pinky" id="esc">ESC</li>
